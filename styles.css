@@ -29,12 +29,25 @@ body {
   color: white;
 }
 
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.services, .about, .portfolio, .clients, .blogs, .contact {
+  animation: fadeInUp 0.8s ease-out;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
   background-color: #1a0b3d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -55,6 +68,11 @@ nav a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffc107;
 }
 
 nav a.active {
@@ -229,6 +247,7 @@ nav a.active {
 .about-image img {
   width: 100%;
   border-radius: 15px;
+  animation: imgLoad 0.5s ease-in;
 }
 
 .about-content {
@@ -257,15 +276,14 @@ nav a.active {
   color: #d1c5e8;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  header { padding: 20px; flex-direction: column; gap: 20px; }
-  nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-  .hero h1 { font-size: 48px; }
-  .hero-buttons { flex-direction: column; align-items: center; }
-  .services, .about { padding: 60px 20px; }
-  .about { flex-direction: column; }
-  .services h2, .about-content h2 { font-size: 36px; }
+/* Image Load Animation */
+@keyframes imgLoad {
+  from { filter: blur(10px); opacity: 0; }
+  to { filter: blur(0); opacity: 1; }
+}
+
+img {
+  animation: imgLoad 0.5s ease-in;
 }
 
 /* Portfolio Section */
@@ -385,6 +403,7 @@ nav a.active {
 .blog-card:hover {
   transform: translateY(-5px);
   border-color: #ffc107;
+  box-shadow: 0 15px 30px rgba(255, 193, 7, 0.2);
 }
 
 .blog-card img {
@@ -434,11 +453,13 @@ nav a.active {
   color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+  transition: 0.3s;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
   outline: none;
   border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
 }
 
 .contact-form button {
@@ -467,7 +488,7 @@ footer {
 .footer-col h4 { margin-bottom: 20px; font-size: 18px; }
 .footer-col p, .footer-col li { color: #d1c5e8; font-size: 15px; line-height: 1.8; }
 .footer-col ul { list-style: none; }
-.footer-col a { color: #d1c5e8; text-decoration: none; }
+.footer-col a { color: #d1c5e8; text-decoration: none; transition: 0.3s; }
 .footer-col a:hover { color: #ffc107; }
 
 .footer-bottom {
@@ -478,8 +499,39 @@ footer {
   font-size: 14px;
 }
 
-/* Mobile Responsive Updates */
+/* Scroll To Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(to right, #ffc107, #ff9800);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 999;
+  font-size: 24px;
+  color: #1a0b3d;
+  font-weight: 700;
+}
+
+.scroll-top.show { opacity: 1; }
+.scroll-top:hover { transform: translateY(-5px); }
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
+  header { padding: 20px; }
+  nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .hero h1 { font-size: 48px; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .services, .about { padding: 60px 20px; }
+  .about { flex-direction: column; }
+  .services h2, .about-content h2 { font-size: 36px; }
   .portfolio, .clients, .blogs, .contact, footer { padding: 60px 20px; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .portfolio h2, .clients h2, .blogs h2, .contact h2 { font-size: 36px; }
@@ -487,35 +539,4 @@ footer {
   .footer-content { flex-direction: column; gap: 40px; }
   .client-logos { gap: 40px; }
   .client-logos svg { height: 30px; }
-}
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #ffc107;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-  .hamburger { display: flex; }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: #1a0b3d;
-    padding: 20px;
-  }
-  nav ul.active { display: flex; }
-  header { flex-direction: row; }
 }
