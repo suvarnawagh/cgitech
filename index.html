@@ -4,30 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CGI Tech Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="logo">CGI TECH SOLUTIONS</div>
+    <div class="logo">CGI Tech Solutions</div>
     <nav>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#clients">Our Clients</a></li>
         <li><a href="#blogs">Blogs</a></li>
-        <li><a href="#contact" class="btn-contact">Contact US</a></li>
+        <li><a href="#contact" class="btn-contact">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
-      <span class="welcome-badge">• WELCOME TO CGI TECH</span>
-      <h1>Turning Your Digital Ideas Into Reality</h1>
-      <p>We build premium websites, apps & digital solutions that scale your business.</p>
+      <span class="welcome-badge">• WELCOME TO CGI TECH SOLUTIONS</span>
+      <h1>Crafting Digital Excellence</h1>
+      <p>We build stunning websites and powerful applications that drive results for your business.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn-primary">Get Started →</a>
         <a href="#services" class="btn-secondary">Our Services</a>
@@ -35,37 +34,32 @@
     </div>
   </section>
 
-  <!-- Services Section -->
   <section class="services" id="services">
     <span class="section-badge">• OUR SERVICES</span>
-    <h2>What We Offer</h2>
-    <p class="section-subtitle">We provide premium digital solutions to scale your business</p>
-    
+    <h2>What We Do Best</h2>
+    <p class="section-subtitle">We provide end-to-end digital solutions to help your business grow.</p>
     <div class="service-cards">
       <div class="card">
         <div class="icon">💻</div>
         <h3>Web Development</h3>
-        <p>Custom websites & web apps built with modern tech stacks for performance and scalability.</p>
+        <p>Custom websites built with modern technologies. Fast, responsive, and SEO-friendly.</p>
       </div>
-      
       <div class="card">
         <div class="icon">📱</div>
         <h3>App Development</h3>
-        <p>Native and cross-platform mobile applications that deliver seamless user experiences.</p>
+        <p>Native and cross-platform mobile apps for iOS and Android that users love.</p>
       </div>
-      
       <div class="card">
         <div class="icon">🎨</div>
         <h3>UI/UX Design</h3>
-        <p>User-centered design solutions that are both beautiful and functional for your brand.</p>
+        <p>Beautiful and intuitive designs that create amazing user experiences.</p>
       </div>
     </div>
   </section>
 
-  <!-- About Us Section -->
   <section class="about" id="about">
     <div class="about-image">
-    <img src="https://images.unsplash.com/photo-1522071820481-02144c013f2b?w=800&auto=format&fit=crop" alt="Our Team">
+      <img src="https://images.unsplash.com/photo-1522071820481-02144c013f2b?w=800&auto=format&fit=crop" alt="Our Team">
     </div>
     <div class="about-content">
       <span class="section-badge">• ABOUT US</span>
@@ -80,127 +74,107 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
     <span class="section-badge">• PORTFOLIO</span>
     <h2>Our Recent Work</h2>
-    <p class="section-subtitle">Check out some of our amazing projects</p>
-    
+    <p class="section-subtitle">Check out some of our finest projects.</p>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Project 1">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Project 1">
         <div class="overlay">
           <h3>E-Commerce Platform</h3>
           <p>Web Development</p>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3" alt="Project 2">
+        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&auto=format&fit=crop" alt="Project 2">
         <div class="overlay">
           <h3>Mobile Banking App</h3>
           <p>App Development</p>
         </div>
-      </div>
       <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb" alt="Project 3">
+        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&auto=format&fit=crop" alt="Project 3">
         <div class="overlay">
-          <h3>SaaS Dashboard</h3>
+          <h3>Brand Identity Design</h3>
           <p>UI/UX Design</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Clients Section -->
   <section class="clients" id="clients">
     <span class="section-badge">• OUR CLIENTS</span>
     <h2>Trusted By Brands</h2>
-<div class="client-logos">
-  <!-- Google -->
-  <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Google</title><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-  
-  <!-- Microsoft -->
-  <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Microsoft</title><path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/></svg>
-  
-  <!-- Amazon -->
-  <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Amazon</title><path d="M.045 18.575c.06.47.175.77.34.89.175.12.455.18.84.18h.27l.105-.42c.63-2.49 1.26-4.995 1.89-7.5.075-.27.135-.54.18-.81H2.31c-.12.33-.21.66-.27.99-.54 2.22-1.08 4.44-1.62 6.66-.06.24-.105.48-.165.72h-.21zm2.685-7.05c.33-.09.66-.15 1.005-.21.6-3.06 1.2-6.12 1.8-9.18.09-.45.18-.9.27-1.35h1.32c.18.6.36 1.2.54 1.8.63 2.19 1.26 4.38 1.89 6.57.12.39.21.78.33 1.17h-1.29c-.18-.51-.36-1.02-.54-1.53-.6-1.71-1.2-3.42-1.8-5.13-.15.81-.3 1.62-.45 2.43-.48 2.58-.96 5.16-1.44 7.74-.06.3-.12.6-.18.9H.9c.18-.51.36-1.02.54-1.53.36-1.02.72-2.04 1.08-3.06.09-.21.15-.42.21-.63zm10.71 6.6c1.05.03 2.01-.18 2.88-.63.87-.45 1.59-1.08 2.16-1.89.57-.81.96-1.74 1.17-2.79.21-1.05.27-2.13.18-3.24h-1.2c.06.99 0 1.98-.18 2.94-.18.96-.51 1.83-.99 2.61-.48.78-1.11 1.41-1.89 1.89-.78.48-1.68.75-2.7.78-1.02.03-2.04-.18-3.06-.63-1.02-.45-1.89-1.11-2.61-1.98-.72-.87-1.26-1.89-1.62-3.06-.36-1.17-.51-2.4-.45-3.69h-1.2c-.06 1.41.12 2.79.54 4.14.42 1.35 1.08 2.55 1.98 3.6.9 1.05 1.98 1.86 3.24 2.43 1.26.57 2.64.87 4.02.9zm4.56-10.95c.12.45.24.9.33 1.35.33 1.65.66 3.3.99 4.95.06.33.12.66.18.99h-1.2c-.09-.42-.18-.84-.27-1.26-.33-1.56-.66-3.12-.99-4.68-.06-.3-.12-.6-.18-.9h1.14z"/></svg>
-  
-  <!-- Spotify -->
-  <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Spotify</title><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.582-.299.6-1.02.78-1.62.48z"/></svg>
-</div>
+    <div class="client-logos">
+      <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Google</title><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+      <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Microsoft</title><path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/></svg>
+      <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Amazon</title><path d="M.045 18.575c.06.47.175.77.34.89.175.12.455.18.84.18h.27l.105-.42c.63-2.49 1.26-4.995 1.89-7.5.075-.27.135-.54.18-.81H2.31c-.12.33-.21.66-.27.99-.54 2.22-1.08 4.44-1.62 6.66-.06.24-.105.48-.165.72h-.21zm2.685-7.05c.33-.09.66-.15 1.005-.21.6-3.06 1.2-6.12 1.8-9.18.09-.45.18-.9.27-1.35h1.32c.18.6.36 1.2.54 1.8.63 2.19 1.26 4.38 1.89 6.57.12.39.21.78.33 1.17h-1.29c-.18-.51-.36-1.02-.54-1.53-.6-1.71-1.2-3.42-1.8-5.13-.15.81-.3 1.62-.45 2.43-.48 2.58-.96 5.16-1.44 7.74-.06.3-.12.6-.18.9H.9c.18-.51.36-1.02.54-1.53.36-1.02.72-2.04 1.08-3.06.09-.21.15-.42.21-.63zm10.71 6.6c1.05.03 2.01-.18 2.88-.63.87-.45 1.59-1.08 2.16-1.89.57-.81.96-1.74 1.17-2.79.21-1.05.27-2.13.18-3.24h-1.2c.06.99 0 1.98-.18 2.94-.18.96-.51 1.83-.99 2.61-.48.78-1.11 1.41-1.89 1.89-.78.48-1.68.75-2.7.78-1.02.03-2.04-.18-3.06-.63-1.02-.45-1.89-1.11-2.61-1.98-.72-.87-1.26-1.89-1.62-3.06-.36-1.17-.51-2.4-.45-3.69h-1.2c-.06 1.41.12 2.79.54 4.14.42 1.35 1.08 2.55 1.98 3.6.9 1.05 1.98 1.86 3.24 2.43 1.26.57 2.64.87 4.02.9zm4.56-10.95c.12.45.24.9.33 1.35.33 1.65.66 3.3.99 4.95.06.33.12.66.18.99h-1.2c-.09-.42-.18-.84-.27-1.26-.33-1.56-.66-3.12-.99-4.68-.06-.3-.12-.6-.18-.9h1.14z"/></svg>
+      <svg role="img" viewBox="0 0 24 24" height="40" fill="#94a3b8"><title>Spotify</title><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.582-.299.6-1.02.78-1.62.48z"/></svg>
+    </div>
   </section>
 
-  <!-- Blogs Section -->
   <section class="blogs" id="blogs">
     <span class="section-badge">• BLOGS</span>
-    <h2>Latest Insights</h2>
+    <h2>Latest Articles</h2>
     <div class="blog-cards">
       <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643" alt="Blog 1">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop" alt="Blog 1">
         <div class="blog-content">
           <span class="date">April 10, 2026</span>
-          <h3>Top Web Dev Trends in 2026</h3>
-          <p>Discover the latest technologies shaping the future of web development...</p>
+          <h3>Top 5 Web Design Trends in 2026</h3>
+          <p>Discover the latest trends shaping the future of web design and user experience.</p>
           <a href="#">Read More →</a>
         </div>
       </div>
       <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Blog 2">
+        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=600&auto=format&fit=crop" alt="Blog 2">
         <div class="blog-content">
           <span class="date">April 5, 2026</span>
-          <h3>Why UI/UX Matters for ROI</h3>
-          <p>Good design is not just pretty. It directly impacts your business growth...</p>
+          <h3>Why Your Business Needs a Mobile App</h3>
+          <p>Learn how a custom mobile app can boost customer engagement and sales.</p>
           <a href="#">Read More →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="contact" id="contact">
     <span class="section-badge">• CONTACT US</span>
-    <h2>Let's Build Together</h2>
-    <p class="section-subtitle">Have a project in mind? Get in touch with us</p>
-    
-    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/">
-  <input type="hidden" name="form-name" value="contact" />
-  <div class="form-row">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-  </div>
-  <input type="text" name="subject" placeholder="Subject" required>
-  <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-  <button type="submit" class="btn-primary">Send Message →</button>
-</form>
+    <h2>Let's Work Together</h2>
+    <p class="section-subtitle">Have a project in mind? We'd love to hear about it.</p>
+    <form class="contact-form" action="https://formspree.io/f/xwpnzgjn" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit" class="btn-primary">Send Message →</button>
+    </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-col">
-        <div class="logo">CGI TECH SOLUTIONS</div>
-        <p>Building premium digital experiences that help businesses scale.</p>
+        <h4>CGI Tech Solutions</h4>
+        <p>Crafting digital excellence for businesses worldwide.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#">Home</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blogs">Blogs</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <ul>
-          <li>hello@cgitech.com</li>
-          <li>+91 98765 43210</li>
-          <li>Nagpur, Maharashtra</li>
-        </ul>
+        <p>hello@cgitechsolutions.com</p>
+        <p>+91 12345 67890</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 CGI Tech Solutions. All rights reserved.</p>
+      <p>© 2026 CGI Tech Solutions. All Rights Reserved.</p>
     </div>
   </footer>
 </body>
