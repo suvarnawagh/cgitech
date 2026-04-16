@@ -658,3 +658,21 @@ footer {
     background: #2d1656;
     color: #ffc107;
 }
+.top-bar {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-content {
+  display: inline-block;
+  animation: scroll-left 25s linear infinite;
+}
+.marquee-content span {
+  padding-right: 100px; /* हाच आहे गॅप. 50px कमी, 200px जास्त */
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
