@@ -728,6 +728,7 @@ footer {
   margin-top: 20px;
 }
 /* Footer 4-Column Layout Update */
+/* Footer 4-Column Layout | जुना .footer-content डिलीट करून हा टाक */
 .footer-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
@@ -824,6 +825,30 @@ footer {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+}
+
+.footer-contact li span {
+  color: #f59e0b;
+  margin-top: 2px;
+}
+
+.map-box {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer-contact li span {
