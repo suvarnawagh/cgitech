@@ -4,323 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CGI Tech Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Top Marquee Bar -->
-    <div class="top-bar">
-        <div class="marquee-wrapper">
-            <div class="marquee-text">
-                <span>🚀 Get 20% OFF on All Services | Limited Time Offer</span>
-                <span>💻 High-Performing Websites & Data-Driven Marketing</span>
-                <span>📱 Call Now: +91 77963 40778</span>
-                <span>🚀 Get 20% OFF on All Services | Limited Time Offer</span>
-                <span>💻 High-Performing Websites & Data-Driven Marketing</span>
-                <span>📱 Call Now: +91 77963 40778</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Top Marquee Start -->
+   <!-- Top Marquee Start -->
+<div class="top-bar">
+   <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+    <strong>Welcome to CGI Tech Solutions</strong> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <strong>Website Design & Development</strong> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <strong>Digital Marketing Services</strong>
+   </marquee>
+</div>
+<!-- Top Marquee End -->
+    <!-- Top Marquee End -->
     <header>
-        <div class="logo">
-            <div class="logo-icon">CGI</div>
-            <span>CGI Tech Solutions</span>
-        </div>
+        <div class="logo">CGI TECH SOLUTIONS</div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#" class="active">HOME</a></li>
                 <li class="dropdown">
-                    <a href="#services">Services</a>
+                    <a href="#services">SERVICES ▼</a>
                     <ul class="dropdown-menu">
                         <li><a href="#web-development">Web Development</a></li>
                         <li><a href="#app-development">App Development</a></li>
-                        <li><a href="#seo">SEO</a></li>
                         <li><a href="#social-media">Social Media Marketing</a></li>
+                        <li><a href="#sem">Search Engine Marketing</a></li>
+                        <li><a href="#personal-branding">Personal Branding</a></li>
+                        <li><a href="#seo">SEO</a></li>
+                        <li><a href="#whatsapp-api">WhatsApp API</a></li>
+                        <li><a href="#erp">ERP Solutions</a></li>
+                        <li><a href="#video-production">Video Production</a></li>
+                        <li><a href="#ai-chatbot">AI Chatbot</a></li>
+                        <li><a href="#cloud-solutions">Cloud Solutions</a></li>
                     </ul>
                 </li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <li><a href="#contact" class="btn-contact">Contact Us</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#clients">CLIENTS</a></li>
+                <li><a href="#blogs">BLOGS</a></li>
+                <li><a href="#contact" class="btn-contact">CONTACT US</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="welcome-badge">WELCOME TO CGI TECH SOLUTIONS</div>
-            <h1>We Create<br>Digital Excellence</h1>
-            <p>High-performing websites & data-driven marketing strategies that transform businesses online.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Get Started</a>
-                <a href="#portfolio" class="btn-secondary">View Our Work</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-badge">OUR SERVICES</div>
-        <h2>What We Do Best</h2>
-        <p class="section-subtitle">We provide comprehensive digital solutions to grow your business</p>
-        <div class="service-cards">
-            <div class="card" id="web-development">
-                <div class="icon">💻</div>
-                <h3>Web Development</h3>
-                <p>Custom, responsive websites built with latest technologies for optimal performance and user experience.</p>
-            </div>
-            <div class="card" id="app-development">
-                <div class="icon">📱</div>
-                <h3>App Development</h3>
-                <p>Native and cross-platform mobile applications that engage users and drive business growth.</p>
-            </div>
-            <div class="card" id="seo">
-                <div class="icon">🚀</div>
-                <h3>SEO Optimization</h3>
-                <p>Data-driven SEO strategies to improve your search rankings and increase organic traffic.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-image">
-            <img src="https://placehold.co/800x600/1a0b3d/f59e0b?text=CGI+Tech+Solutions" alt="Our Team">
-        </div>
-        <div class="about-content">
-            <div class="section-badge">ABOUT US</div>
-            <h2>We Create Digital Excellence</h2>
-            <p>CGI Tech Solutions is a leading technology company in Pune dedicated to delivering innovative digital solutions. With years of experience and a passionate team, we transform ideas into reality.</p>
-            <p>Our mission is to empower businesses through technology, providing cutting-edge solutions that drive growth and success in the digital age.</p>
-            <ul class="about-points">
-                <li>✓ Expert Team of Developers</li>
-                <li>✓ 100+ Successful Projects</li>
-                <li>✓ 24/7 Customer Support</li>
-            </ul>
-            <a href="#contact" class="btn-primary">Learn More</a>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="section-badge">OUR PORTFOLIO</div>
-        <h2>Featured Projects</h2>
-        <p class="section-subtitle">Check out some of our recent work</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://placehold.co/600x400/1a0b3d/ffc107?text=Project+1" alt="Project 1">
-                <div class="overlay">
-                    <h3>E-Commerce Website</h3>
-                    <p>Web Development</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="welcome-badge">WELCOME TO CGI TECH SOLUTIONS</div>
+                <h1>Solutions Design<br>Your Business</h1>
+                <p>We build innovative digital solutions that drive growth and transform businesses.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Get Started</a>
+                    <a href="#portfolio" class="btn-secondary">Our Work</a>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="https://placehold.co/600x400/1a0b3d/ffc107?text=Project+2" alt="Project 2">
-                <div class="overlay">
-                    <h3>Mobile App UI</h3>
-                    <p>App Development</p>
-                </div>
-            <div class="portfolio-item">
-                <img src="https://placehold.co/600x400/1a0b3d/ffc107?text=Project+3" alt="Project 3">
-                <div class="overlay">
-                    <h3>Corporate Website</h3>
-                    <p>Web Development</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Clients Section -->
-    <section class="clients" id="clients">
-        <div class="section-badge">OUR CLIENTS</div>
-        <h2>Trusted By Leading Brands</h2>
-        <div class="client-logos">
-            <svg height="40" viewBox="0 0 100 40" fill="#d1c5e8"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="600">CLIENT 1</text></svg>
-            <svg height="40" viewBox="0 0 100 40" fill="#d1c5e8"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="600">CLIENT 2</text></svg>
-            <svg height="40" viewBox="0 0 100 40" fill="#d1c5e8"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="600">CLIENT 3</text></svg>
-            <svg height="40" viewBox="0 0 100 40" fill="#d1c5e8"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-weight="600">CLIENT 4</text></svg>
-        </div>
-    </section>
-
-    <!-- Blogs Section -->
-    <section class="blogs" id="blogs">
-        <div class="section-badge">LATEST BLOGS</div>
-        <h2>Insights & Updates</h2>
-        <div class="blog-cards">
-            <div class="blog-card">
-                <img src="https://placehold.co/400x220/1a0b3d/ffc107?text=Blog+1" alt="Blog 1">
-                <div class="blog-content">
-                    <p class="date">April 10, 2026</p>
-                    <h3>Top Web Development Trends 2026</h3>
-                    <p>Discover the latest trends shaping the future of web development and design...</p>
-                    <a href="#">Read More →</a>
+        <section class="services" id="services">
+            <div class="section-badge">OUR SERVICES</div>
+            <h2>What We Do Best</h2>
+            <p class="section-subtitle">We provide comprehensive digital solutions tailored to your needs</p>
+            <div class="service-cards">
+                <div class="card" id="web-development">
+                    <div class="icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with modern technologies for optimal performance.</p>
+                </div>
+                <div class="card" id="app-development">
+                    <div class="icon">📱</div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications that deliver exceptional user experiences.</p>
+                </div>
+                <div class="card" id="social-media">
+                    <div class="icon">📱</div>
+                    <h3>Social Media Marketing</h3>
+                    <p>Instagram, Facebook, LinkedIn साठी क्रिएटिव्ह पोस्ट, रील्स आणि Paid Ad कॅम्पेन. ब्रँड अवेअरनेस वाढवून लीड्स जनरेट करू.</p>
+                </div>
+                <div class="card" id="sem">
+                    <div class="icon">🔍</div>
+                    <h3>Search Engine Marketing</h3>
+                    <p>Google Ads द्वारे टार्गेटेड कस्टमरपर्यंत पोहोचा. कमी बजेटमध्ये जास्त ROI देणारे कॅम्पेन सेटअप आणि मॅनेजमेंट.</p>
+                </div>
+                <div class="card" id="personal-branding">
+                    <div class="icon">✨</div>
+                    <h3>Personal Branding</h3>
+                    <p>तुमची ऑनलाइन ओळख बनवा. प्रोफेशनल पोर्टफोलिओ, LinkedIn ऑप्टिमायझेशन आणि कंटेंट स्ट्रॅटेजी.</p>
+                </div>
+                <div class="card" id="seo">
+                    <div class="icon">📈</div>
+                    <h3>SEO</h3>
+                    <p>Google वर टॉप रँक मिळवा. Keyword रिसर्च, On-page & Off-page SEO, टेक्निकल SEO करून ऑर्गॅनिक ट्रॅफिक वाढवू.</p>
+                </div>
+                <div class="card" id="whatsapp-api">
+                    <div class="icon">💬</div>
+                    <h3>WhatsApp API</h3>
+                    <p>WhatsApp Business API इंटिग्रेशन. ऑटोमॅटिक रिप्लाय, बल्क मेसेजिंग आणि चॅटबॉट द्वारे कस्टमर एंगेजमेंट वाढवा.</p>
+                </div>
+                <div class="card" id="erp">
+                    <div class="icon">⚙️</div>
+                    <h3>ERP Solutions</h3>
+                    <p>तुमच्या व्यवसायासाठी कस्टम ERP सॉफ्टवेअर. अकाउंटिंग, इन्व्हेंटरी, HR, सेल्स सर्व एका ठिकाणी मॅनेज करा.</p>
+                </div>
+                <div class="card" id="video-production">
+                    <div class="icon">🎬</div>
+                    <h3>Video Production</h3>
+                    <p>प्रोफेशनल प्रमोशनल व्हिडिओ, ॲड फिल्म्स, प्रॉडक्ट डेमो आणि सोशल मीडिया रील्स. स्क्रिप्ट ते फायनल एडिटिंग.</p>
+                </div>
+                <div class="card" id="ai-chatbot">
+                    <div class="icon">🤖</div>
+                    <h3>AI Chatbot</h3>
+                    <p>वेबसाइट आणि WhatsApp साठी 24/7 स्मार्ट AI चॅटबॉट. कस्टमरचे प्रश्न ऑटोमॅटिक सोडवा आणि लीड्स कॅप्चर करा.</p>
+                </div>
+                <div class="card" id="cloud-solutions">
+                    <div class="icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and deployment solutions for modern businesses.</p>
                 </div>
             </div>
-            <div class="blog-card">
-                <img src="https://placehold.co/400x220/1a0b3d/ffc107?text=Blog+2" alt="Blog 2">
-                <div class="blog-content">
-                    <p class="date">April 5, 2026</p>
-                    <h3>SEO Strategies That Actually Work</h3>
-                    <p>Learn proven SEO techniques to boost your website ranking and drive organic traffic...</p>
-                    <a href="#">Read More →</a>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1522071820481-02144c013f2b?w=800&auto=format&fit=crop" alt="Our Team">
+            </div>
+            <div class="about-content">
+                <div class="section-badge">ABOUT US</div>
+                <h2>We Create Digital Excellence</h2>
+                <p>CGI Tech Solutions is a leading technology company dedicated to delivering innovative digital solutions. With years of experience and a passionate team, we transform ideas into reality.</p>
+                <p>Our mission is to empower businesses through technology, providing cutting-edge solutions that drive growth and success in the digital age.</p>
+                <ul class="about-points">
+                    <li>✓ Expert Team of Developers</li>
+                    <li>✓ 100+ Successful Projects</li>
+                    <li>✓ 24/7 Customer Support</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Learn More</a>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="section-badge">PORTFOLIO</div>
+            <h2>Our Recent Work</h2>
+            <p class="section-subtitle">Explore some of our finest projects and success stories</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Project 1">
+                    <div class="overlay">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&auto=format&fit=crop" alt="Project 2">
+                    <div class="overlay">
+                        <h3>Mobile Banking App</h3>
+                        <p>App Development</p>
+                    </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&auto=format&fit=crop" alt="Project 3">
+                    <div class="overlay">
+                        <h3>Cloud Dashboard</h3>
+                        <p>Cloud Solutions</p>
+                    </div>
                 </div>
             </div>
-            <div class="blog-card">
-                <img src="https://placehold.co/400x220/1a0b3d/ffc107?text=Blog+3" alt="Blog 3">
-                <div class="blog-content">
-                    <p class="date">March 28, 2026</p>
-                    <h3>Mobile App Design Best Practices</h3>
-                    <p>Essential design principles for creating intuitive and engaging mobile applications...</p>
-                    <a href="#">Read More →</a>
+        </section>
+
+        <section class="clients" id="clients">
+            <h2>Trusted By Leading Brands</h2>
+            <div class="client-logos">
+                <svg height="40" viewBox="0 0 120 40"><text x="0" y="30" font-family="Arial" font-size="30" font-weight="bold">Google</text></svg>
+                <svg height="40" viewBox="0 0 120 40"><text x="0" y="30" font-family="Arial" font-size="30" font-weight="bold">Amazon</text></svg>
+                <svg height="40" viewBox="0 0 120 40"><text x="0" y="30" font-family="Arial" font-size="30" font-weight="bold">Netflix</text></svg>
+                <svg height="40" viewBox="0 0 120 40"><text x="0" y="30" font-family="Arial" font-size="30" font-weight="bold">Spotify</text></svg>
+            </div>
+        </section>
+
+        <section class="blogs" id="blogs">
+            <div class="section-badge">OUR BLOGS</div>
+            <h2>Latest Insights & News</h2>
+            <div class="blog-cards">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&auto=format&fit=crop" alt="Blog 1">
+                    <div class="blog-content">
+                        <span class="date">April 10, 2026</span>
+                        <h3>The Future of Web Development</h3>
+                        <p>Exploring upcoming trends and technologies shaping the web development landscape...</p>
+                        <a href="#">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop" alt="Blog 2">
+                    <div class="blog-content">
+                        <span class="date">April 5, 2026</span>
+                        <h3>Mobile App Best Practices</h3>
+                        <p>Key strategies for building successful mobile applications that users love...</p>
+                        <a href="#">Read More →</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-badge">CONTACT US</div>
-        <h2>Let's Work Together</h2>
-        <p class="section-subtitle">Have a project in mind? Get in touch with us</p>
-        <form class="contact-form">
-            <div class="form-row">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
+        <section class="contact" id="contact">
+            <div class="section-badge">CONTACT US</div>
+            <h2>Let's Build Something Great</h2>
+            <p class="section-subtitle">Get in touch with us to discuss your project</p>
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div class="contact-social">
+                <a href="https://wa.me/919307125792" target="_blank" class="btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    WhatsApp Us
+                </a>
+                <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank" class="btn-instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="white" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7s33.5-74.7 74.7-74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    Follow on Instagram
+                </a>
             </div>
-            <input type="text" placeholder="Subject">
-            <textarea placeholder="Your Message" rows="6" required></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
-        </form>
-        <div class="contact-social">
-            <a href="https://wa.me/917796340778" class="btn-whatsapp" target="_blank">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                WhatsApp
-            </a>
-            <a href="https://www.instagram.com/cgi_tech_solutions" class="btn-instagram" target="_blank">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8s12-26.8 26.8-26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                Instagram
-            </a>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <!-- Column 1: Logo + Social -->
             <div class="footer-col">
-                <div class="logo footer-logo">
-                    <div class="logo-icon">CGI</div>
-                    <span>CGI Tech Solutions</span>
-                </div>
-                <p>High-performing websites & data-driven marketing strategies that transform businesses online.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank" aria-label="Instagram">
-                        <svg height="18" width="18" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                    </a>
-                    <a href="#" target="_blank" aria-label="LinkedIn">
-                        <svg height="18" width="18" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-                    </a>
-                    <a href="#" target="_blank" aria-label="Facebook">
-                        <svg height="18" width="18" fill="currentColor" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-                    </a>
-                    <a href="#" target="_blank" aria-label="Twitter">
-                        <svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-                    </a>
-                </div>
+                <h4>CGI Tech Solutions</h4>
+                <p>Building digital excellence through innovative technology solutions.</p>
             </div>
-
-            <!-- Column 2: Quick Links -->
             <div class="footer-col">
-                <h4 class="footer-title">QUICK LINKS</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#clients">Our Clients</a></li>
-                    <li><a href="#blogs">Blogs</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-
-            <!-- Column 3: Our Services -->
             <div class="footer-col">
-                <h4 class="footer-title">OUR SERVICES</h4>
-                <ul class="footer-links">
-                    <li><a href="#social-media">Social Media Marketing</a></li>
-                    <li><a href="#sem">Search Engine Marketing</a></li>
-                    <li><a href="#personal-branding">Personal Branding</a></li>
-                    <li><a href="#web-development">Web Development</a></li>
-                    <li><a href="#app-development">App Development</a></li>
-                    <li><a href="#seo">SEO</a></li>
-                    <li><a href="#whatsapp-api">WhatsApp API</a></li>
-                    <li><a href="#erp">ERP</a></li>
-                    <li><a href="#video-production">Video Production</a></li>
-                    <li><a href="#ai-chatbot">AI Chatbot</a></li>
-                </ul>
+                <h4>Contact Info</h4>
+                <p>Email: info@cgitechsolutions.com</p>
+                <p>Phone: +91 93071-25792</p>
+                <p>Location: Nagpur, Maharashtra</p>
             </div>
-
-            <!-- Column 4: Get In Touch + Map + Newsletter -->
-            <div class="footer-col">
-                <h4 class="footer-title">GET IN TOUCH</h4>
-                <ul class="footer-contact">
-                    <li><span>📞</span> +91 77963 40778</li>
-                    <li><span>✉️</span> cgicrafters007@gmail.com</li>
-                    <li><span>📍</span> Tanishk Pride, Flat No. 308,<br>Charoli Budruk, Pune - 412105</li>
-                </ul>
-                
-                <div class="map-box">
-                  <iframe 
-                    src="https://maps.google.com/maps?q=Tanishk%20Pride%20Charoli%20Budruk%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="150" 
-                    style="border:0; border-radius:8px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-                </div>
-
-                <h4 class="footer-title newsletter-title">NEWSLETTER</h4>
-                <p class="newsletter-text">Get tips, trends & offers in your inbox.</p>
-            </div>
-        </div>
-        
         <div class="footer-bottom">
             <p>&copy; 2026 CGI Tech Solutions. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Social Floating Buttons -->
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
     <div class="social-float">
-        <a href="https://wa.me/917796340778" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-            <svg width="24" height="24" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        <a href="https://wa.me/919307125792" target="_blank" class="whatsapp-float">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
         </a>
-        <a href="https://www.instagram.com/cgi_tech_solutions" class="instagram-float" target="_blank" aria-label="Instagram">
-            <svg width="24" height="24" fill="white" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank" class="instagram-float">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="white" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7s33.5-74.7 74.7-74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         </a>
     </div>
 
-    <!-- Scroll To Top Button -->
-    <div class="scroll-top" id="scrollTop">↑</div>
-
-    <script>
-        // Scroll To Top
-        const scrollTop = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTop.classList.add('show');
-            } else {
-                scrollTop.classList.remove('show');
-            }
-        });
-        scrollTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
 </body>
 </html>
+ 
