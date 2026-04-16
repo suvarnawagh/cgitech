@@ -713,3 +713,17 @@ footer {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+.footer-logo {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-logo .logo-icon {
+  width: 28px;
+  height: 28px;
+  font-size: 11px;
+}
+
+.map-box {
+  margin-top: 20px;
+}
