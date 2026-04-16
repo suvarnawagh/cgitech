@@ -636,7 +636,7 @@ footer {
 }
 .dropdown-menu li a {
     padding: 12px 20px;
-    display: block;
+    display: block;+
     color: #a8b2d1;
     text-decoration: none;
 }
