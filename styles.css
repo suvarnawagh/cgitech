@@ -659,18 +659,36 @@ footer {
     color: #ffc107;
 }
 .top-bar {
+  background: #f59e0b;
+  color: #000;
+  padding: 8px 0;
   overflow: hidden;
+}
+
+.marquee-wrapper {
   white-space: nowrap;
 }
-.marquee-content {
-  display: inline-block;
-  animation: scroll-left 25s linear infinite;
+
+.marquee-text {
+  display: flex;
+  animation: marquee-scroll 30s linear infinite;
 }
-.marquee-content span {
-  padding-right: 100px; /* हाच आहे गॅप. 50px कमी, 200px जास्त */
-}
-.marquee-content:hover {
+
+.marquee-text:hover {
   animation-play-state: paused;
+}
+
+.marquee-text span {
+  padding-right: 150px; /* दोन सेटमधला गॅप */
+}
+
+.marquee-text span:last-child {
+  padding-right: 0; /* लूपचा झटका जाणार नाही */
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-66.666%); }
 }
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
