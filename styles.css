@@ -63,13 +63,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-
-.logo {
-  font-weight: 700;
-  font-size: 18px;
-  color: #ffc107;
-}
-
 nav ul {
   display: flex;
   list-style: none;
