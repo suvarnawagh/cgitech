@@ -1,4 +1,18 @@
-html, body {
+/* Top Marquee Bar */
+.top-bar {
+  background: #ffc107;
+  color: #1a0b3d;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.top-bar marquee {
+  color: #1a0b3d;
+}
+ body {
   width: 100%;
   overflow-x: hidden;
 }
