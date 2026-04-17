@@ -1205,5 +1205,53 @@ a[href*="wa.me"],
     background-image: none !important;
 }
 </style>
+    <style>
+/* 1. Footer चा निळा ग्रेडियंट जबरदस्तीने काढ आणि पर्पल कर */
+body footer,
+html body footer,
+footer[style] {
+    background: #1a0b3d!important;
+    background-color: #1a0b3d!important;
+    background-image: none!important;
+}
+
+/* 2. Footer मधल्या सगळ्या div ना पण पर्पल कर */
+footer div,
+footer.container,
+footer.row,
+footer.footer-widget {
+    background: transparent!important;
+    background-image: none!important;
+}
+
+/* 3. Social Icons चे ब्रँड कलर फिक्स कर */
+footer.social-icons a {
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 50%!important;
+    display: inline-flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+}
+
+/* LinkedIn निळा */
+footer a[href*="linkedin.com"] {
+    background: #0077b5!important;
+    color: #fff!important;
+}
+
+/* Facebook निळा */
+footer a[href*="facebook.com"] {
+    background: #1877f2!important;
+    color: #fff!important;
+}
+
+/* X / Twitter काळा */
+footer a[href*="x.com"],
+footer a[href*="twitter.com"] {
+    background: #000000!important;
+    color: #fff!important;
+}
+</style>
 </body>
 </html>
