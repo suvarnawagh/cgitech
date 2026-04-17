@@ -2766,3 +2766,50 @@ footer {
 #faq .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
+/* CGI TECH FOOTER FIX - FINAL OVERRIDE */
+footer {
+  background: #1a0b3d !important;
+  background-color: #1a0b3d !important;
+  background-image: none !important;
+}
+
+.footer-social {
+  display: flex !important;
+  gap: 20px !important;
+  margin-top: 20px !important;
+}
+
+.footer-social a {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  color: #fff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+}
+
+.footer-social a:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: #ffc107 !important;
+  color: #ffc107 !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Instagram ला ग्रेडियंट ठेव */
+.footer-social a[href*="instagram"] {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+  border: none !important;
+}
+
+.footer-social a[href*="instagram"]:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+  transform: translateY(-3px) scale(1.1) !important;
+}
