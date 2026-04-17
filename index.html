@@ -1210,52 +1210,56 @@ footer {
     border-color: #ffc107!important;
 }
 </style>
-    <style>
-/* 1. Footer पर्पल */
-footer {
+<style>
+/* === FOOTER + SOCIAL ICONS FINAL FIX === */
+
+/* 1. Footer जबरदस्तीने पर्पल कर */
+body footer,
+html footer {
     background: #1a0b3d!important;
     background-image: none!important;
+    background-color: #1a0b3d!important;
 }
 
-/* 2. सगळे सोशल आयकॉन वेगळे आणि बेसिक स्टाईल */
-footer .social-icons,
-footer .social-links {
+/* 2. सगळे सोशल आयकॉन बेसिक सेटिंग - वेगळे आणि कलर शिवाय */
+footer .social-icons {
     display: flex!important;
-    gap: 18px!important;
+    gap: 20px!important; /* अंतर वाढवलं */
+    align-items: center!important;
 }
 
 footer .social-icons a {
-    width: 42px!important;
-    height: 42px!important;
+    width: 40px!important;
+    height: 40px!important;
     border-radius: 50%!important;
     display: inline-flex!important;
     align-items: center!important;
     justify-content: center!important;
-    margin: 0!important;
-    font-size: 18px!important;
     background: transparent!important; /* डिफॉल्ट कलर नाही */
-    border: 1.5px solid #ffffff40!important; /* डिफॉल्ट पांढरी बॉर्डर */
-    color: #ffffff!important; /* डिफॉल्ट पांढरा आयकॉन */
+    border: 1.5px solid #ffffff30!important; /* हलकी पांढरी रिंग */
+    color: #ffffff!important; /* डिफॉल्ट आयकॉन पांढरा */
+    margin: 0!important;
+    padding: 0!important;
 }
 
-/* 3. फक्त Instagram ला ग्रेडियंट कलर दे */
+/* 3. फक्त Instagram ला ग्रेडियंट कलर */
 footer a[href*="instagram.com"] {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)!important;
-    border: none!important; /* बॉर्डर नको */
+    border: none!important;
     color: #fff!important;
 }
 
-/* 4. फक्त WhatsApp ला हिरवा कलर दे */
-footer a[href*="wa.me"],
-footer a[href*="whatsapp"] {
+/* 4. फक्त WhatsApp ला हिरवा कलर - फ्लोटिंग आणि फुटर दोन्ही */
+a[href*="wa.me"],
+a[href*="whatsapp"] {
     background: #25D366!important;
-    border: none!important; /* बॉर्डर नको */
+    border: none!important;
     color: #fff!important;
 }
 
 /* 5. Hover इफेक्ट */
 footer .social-icons a:hover {
-    transform: scale(1.1)!important;
+    transform: translateY(-3px)!important;
     transition: 0.3s!important;
 }
 </style>
