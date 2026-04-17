@@ -1171,24 +1171,24 @@ footer {
 }
 
 .btn-whatsapp, .btn-instagram {
-  padding: 15px 30px;
-  border-radius: 30px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
 }
 
 .btn-whatsapp {
-  background: #25D366;
+    background: #25D366;
 }
 
 .btn-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
-
 .btn-whatsapp:hover, .btn-instagram:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
