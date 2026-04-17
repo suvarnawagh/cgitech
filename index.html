@@ -550,6 +550,102 @@
     </div>
 </div>
 <!-- TESTIMONIAL SLIDER END -->
+  <!-- REVIEW SECTION START -->
+<section class="reviews" id="review-section">
+  <div class="section-badge">LIVE REVIEWS</div>
+  <h2>What Clients Say</h2>
+  <p class="section-subtitle">Submit your rating and see it live here</p>
+
+  <!-- रिव्ह्यू फॉर्म -->
+  <form id="reviewForm" class="contact-form-pro" style="max-width:600px; margin: 0 auto 50px;">
+    <div class="form-group">
+      <label>YOUR NAME</label>
+      <input type="text" id="reviewerName" placeholder="Rahul Sharma" required>
+    </div>
+    <div class="form-group">
+      <label>RATING</label>
+      <select id="reviewerRating" required>
+        <option value="">Select Rating...</option>
+        <option value="5">★★★★★ - Excellent</option>
+        <option value="4">★★★★☆ - Very Good</option>
+        <option value="3">★★★☆☆ - Good</option>
+        <option value="2">★★☆☆☆ - Average</option>
+        <option value="1">★☆☆☆☆ - Poor</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>YOUR REVIEW</label>
+      <textarea id="reviewerText" rows="4" placeholder="Share your experience..." required></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Submit Review →</button>
+  </form>
+
+  <!-- इथे सगळे रिव्ह्यू लाईव्ह दिसतील -->
+  <div id="reviewsContainer" class="testimonial-slider">
+    <div class="slider-wrapper" id="reviewsList"></div>
+  </div>
+</section>
+<!-- REVIEW SECTION END -->
+
+<!-- Firebase Script -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+  // स्टेप 1 मधून कॉपी केलेला तुझा config इथे पेस्ट कर 👇
+  const firebaseConfig = {
+    apiKey: "TUZA-API-KEY",
+    authDomain: "TUZA-PROJECT.firebaseapp.com",
+    databaseURL: "https://TUZA-PROJECT-default-rtdb.firebaseio.com",
+    projectId: "TUZA-PROJECT",
+    storageBucket: "TUZA-PROJECT.appspot.com",
+    messagingSenderId: "123456789",
+    appId: "1:123456789:web:abcdef"
+  };
+
+  // Firebase initialize कर
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+  const reviewsRef = database.ref('reviews');
+
+  // फॉर्म सबमिट झाल्यावर डेटा सेव्ह कर
+  document.getElementById('reviewForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('reviewerName').value;
+    const rating = document.getElementById('reviewerRating').value;
+    const text = document.getElementById('reviewerText').value;
+
+    reviewsRef.push({
+      name: name,
+      rating: rating,
+      text: text,
+      date: new Date().toLocaleDateString('en-IN')
+    });
+
+    alert('Thanks! Your review is now live.');
+    this.reset();
+  });
+
+  // डेटाबेसमध्ये नवीन रिव्ह्यू आला की तो लगेच साईटवर दाखव
+  reviewsRef.on('child_added', function(data) {
+    const review = data.val();
+    const reviewCard = `
+      <div class="testimonial-card active">
+        <div class="quote-icon">“</div>
+        <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+        <p class="review-text">${review.text}</p>
+        <div class="client-info">
+          <div class="client-avatar">${review.name.charAt(0)}</div>
+          <div>
+            <h4>${review.name.toUpperCase()}</h4>
+            <p>${review.date}</p>
+          </div>
+        </div>
+      </div>
+    `;
+    document.getElementById('reviewsList').innerHTML += reviewCard;
+  });
+</script>
    <!-- CONTACT SECTION START -->
 <section class="contact" id="contact">
     <div class="contact-container">
@@ -782,101 +878,5 @@
             setInterval(() => showSlide(currentSlide + 1), 5000);
         });
     </script>
-  <!-- REVIEW SECTION START -->
-<section class="reviews" id="review-section">
-  <div class="section-badge">LIVE REVIEWS</div>
-  <h2>What Clients Say</h2>
-  <p class="section-subtitle">Submit your rating and see it live here</p>
-
-  <!-- रिव्ह्यू फॉर्म -->
-  <form id="reviewForm" class="contact-form-pro" style="max-width:600px; margin: 0 auto 50px;">
-    <div class="form-group">
-      <label>YOUR NAME</label>
-      <input type="text" id="reviewerName" placeholder="Rahul Sharma" required>
-    </div>
-    <div class="form-group">
-      <label>RATING</label>
-      <select id="reviewerRating" required>
-        <option value="">Select Rating...</option>
-        <option value="5">★★★★★ - Excellent</option>
-        <option value="4">★★★★☆ - Very Good</option>
-        <option value="3">★★★☆☆ - Good</option>
-        <option value="2">★★☆☆☆ - Average</option>
-        <option value="1">★☆☆☆☆ - Poor</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>YOUR REVIEW</label>
-      <textarea id="reviewerText" rows="4" placeholder="Share your experience..." required></textarea>
-    </div>
-    <button type="submit" class="btn-submit">Submit Review →</button>
-  </form>
-
-  <!-- इथे सगळे रिव्ह्यू लाईव्ह दिसतील -->
-  <div id="reviewsContainer" class="testimonial-slider">
-    <div class="slider-wrapper" id="reviewsList"></div>
-  </div>
-</section>
-<!-- REVIEW SECTION END -->
-
-<!-- Firebase Script -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-
-<script>
-  // स्टेप 1 मधून कॉपी केलेला तुझा config इथे पेस्ट कर 👇
-  const firebaseConfig = {
-    apiKey: "TUZA-API-KEY",
-    authDomain: "TUZA-PROJECT.firebaseapp.com",
-    databaseURL: "https://TUZA-PROJECT-default-rtdb.firebaseio.com",
-    projectId: "TUZA-PROJECT",
-    storageBucket: "TUZA-PROJECT.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "1:123456789:web:abcdef"
-  };
-
-  // Firebase initialize कर
-  firebase.initializeApp(firebaseConfig);
-  const database = firebase.database();
-  const reviewsRef = database.ref('reviews');
-
-  // फॉर्म सबमिट झाल्यावर डेटा सेव्ह कर
-  document.getElementById('reviewForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('reviewerName').value;
-    const rating = document.getElementById('reviewerRating').value;
-    const text = document.getElementById('reviewerText').value;
-
-    reviewsRef.push({
-      name: name,
-      rating: rating,
-      text: text,
-      date: new Date().toLocaleDateString('en-IN')
-    });
-
-    alert('Thanks! Your review is now live.');
-    this.reset();
-  });
-
-  // डेटाबेसमध्ये नवीन रिव्ह्यू आला की तो लगेच साईटवर दाखव
-  reviewsRef.on('child_added', function(data) {
-    const review = data.val();
-    const reviewCard = `
-      <div class="testimonial-card active">
-        <div class="quote-icon">“</div>
-        <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
-        <p class="review-text">${review.text}</p>
-        <div class="client-info">
-          <div class="client-avatar">${review.name.charAt(0)}</div>
-          <div>
-            <h4>${review.name.toUpperCase()}</h4>
-            <p>${review.date}</p>
-          </div>
-        </div>
-      </div>
-    `;
-    document.getElementById('reviewsList').innerHTML += reviewCard;
-  });
-</script>
 </body>
 </html>
