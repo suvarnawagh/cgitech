@@ -2294,3 +2294,49 @@ footer {
     transform: rotate(45deg);
 }
 }
+/* FAQ Black BG Killer - 100% Working */
+section.faq, 
+#faq, 
+section#faq {
+    background: linear-gradient(135deg, #0a4d68 0%, #088395 50%, #05bfdb 100%) !important;
+    background-color: transparent !important;
+}
+
+/* हेडिंग आणि बॅज पांढरे करण्यासाठी */
+#faq .section-badge {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    display: table !important;
+    margin: 0 auto 15px !important;
+}
+
+#faq h2 {
+    color: #fff !important;
+    display: block !important;
+    text-align: center !important;
+}
+
+#faq .section-subtitle {
+    color: #e0f7fa !important;
+    text-align: center !important;
+}
+
+/* FAQ बॉक्स ग्लास इफेक्ट */
+#faq .faq-item {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+#faq .faq-question,
+#faq .faq-icon {
+    color: #fff !important;
+}
+
+#faq .faq-answer {
+    background: rgba(0, 0, 0, 0.15) !important;
+}
+
+#faq .faq-answer p {
+    color: #e0f7fa !important;
+}
