@@ -1210,90 +1210,62 @@ footer {
     border-color: #ffc107!important;
 }
 </style>
+
 <style>
 /* === FOOTER + SOCIAL ICONS FINAL FIX === */
 
 /* 1. Footer जबरदस्तीने पर्पल कर */
-body footer,
-html footer {
-    background: #1a0b3d!important;
-    background-image: none!important;
-    background-color: #1a0b3d!important;
-}
-
-/* 2. सगळे सोशल आयकॉन बेसिक सेटिंग - वेगळे आणि कलर शिवाय */
-footer .social-icons {
-    display: flex!important;
-    gap: 20px!important; /* अंतर वाढवलं */
-    align-items: center!important;
-}
-
-footer .social-icons a {
-    width: 40px!important;
-    height: 40px!important;
-    border-radius: 50%!important;
-    display: inline-flex!important;
-    align-items: center!important;
-    justify-content: center!important;
-    background: transparent!important; /* डिफॉल्ट कलर नाही */
-    border: 1.5px solid #ffffff30!important; /* हलकी पांढरी रिंग */
-    color: #ffffff!important; /* डिफॉल्ट आयकॉन पांढरा */
-    margin: 0!important;
-    padding: 0!important;
-}
-
-/* 3. फक्त Instagram ला ग्रेडियंट कलर */
-footer a[href*="instagram.com"] {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)!important;
-    border: none!important;
-    color: #fff!important;
-}
-
-/* 4. फक्त WhatsApp ला हिरवा कलर - फ्लोटिंग आणि फुटर दोन्ही */
-a[href*="wa.me"],
-a[href*="whatsapp"] {
-    background: #25D366!important;
-    border: none!important;
-    color: #fff!important;
-}
-
-/* 5. Hover इफेक्ट */
-footer .social-icons a:hover {
-    transform: translateY(-3px)!important;
-    transition: 0.3s!important;
-}
-</style>
-    <style>
-/* 1. Footer पर्पल */
 footer {
     background: #1a0b3d!important;
     background-image: none!important;
 }
 
-/* 2. LinkedIn, Facebook, X ला कलर नको - फक्त पांढरी बॉर्डर */
-footer .social-icons a[href*="linkedin"],
-footer .social-icons a[href*="facebook"],
-footer .social-icons a[href*="twitter"],
-footer .social-icons a[href*="x.com"] {
-    background: transparent!important;
-    border: 1.5px solid #ffffff40!important;
-    color: #ffffff!important;
-}
-
-/* 3. सगळे आयकॉन वेगळे कर */
-footer .social-icons {
+/* 2. तुझा क्लास footer-social आहे, social-icons नाही */
+footer .footer-social {
     display: flex!important;
     gap: 20px!important;
+    align-items: center!important;
+    margin-top: 15px!important;
 }
 
-footer .social-icons a {
-    width: 40px!important;
-    height: 40px!important;
+footer .footer-social a {
+    width: 42px!important;
+    height: 42px!important;
     border-radius: 50%!important;
     display: inline-flex!important;
     align-items: center!important;
     justify-content: center!important;
+    background: transparent!important; /* डिफॉल्ट कलर नाही */
+    border: 1.5px solid #ffffff40!important; /* फक्त पांढरी रिंग */
+    color: #ffffff!important; /* डिफॉल्ट पांढरा आयकॉन */
     margin: 0!important;
+}
+
+/* 3. LinkedIn, Facebook, X ला कलर नकोच */
+footer .footer-social a[href*="linkedin"],
+footer .footer-social a[href*="facebook"],
+footer .footer-social a[href*="twitter"],
+footer .footer-social a[href*="x.com"] {
+    background: transparent!important;
+    background-image: none!important;
+}
+
+/* 4. फक्त Instagram ला ग्रेडियंट कलर */
+footer .footer-social a[href*="instagram"] {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)!important;
+    border: none!important;
+    color: #fff!important;
+}
+
+/* 5. WhatsApp फ्लोटिंग बटण हिरवं */
+.social-float .whatsapp-float {
+    background: #25D366!important;
+}
+
+/* 6. Hover इफेक्ट */
+footer .footer-social a:hover {
+    transform: translateY(-3px)!important;
+    transition: 0.3s!important;
 }
 </style>
 </body>
