@@ -1186,26 +1186,6 @@ footer {
 }
 </style>
     <style>
-/* Instagram बटणाचा ओरिजिनल कलर परत आण */
-.instagram-btn,
-.insta-btn,
-a[href*="instagram"],
-.social-icon.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-    background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-    color: #fff !important;
-    border-radius: 50% !important;
-}
-
-/* WhatsApp बटण पण कन्फर्म कर */
-.whatsapp-btn,
-a[href*="wa.me"],
-.social-icon.whatsapp {
-    background: #25D366 !important;
-    background-image: none !important;
-}
-</style>
-    <style>
 /* Hero मधले सगळे बटण फिक्स कर */
 .hero a,
 .hero button,
@@ -1231,40 +1211,52 @@ a[href*="wa.me"],
 }
 </style>
     <style>
-/* 1. Footer चा निळा ग्रेडियंट 100% काढ */
+/* 1. Footer पर्पल */
 footer {
     background: #1a0b3d!important;
     background-image: none!important;
 }
 
-/* 2. सोशल आयकॉन एका रांगेत, गॅप देऊन, कलर शिवाय */
+/* 2. सगळे सोशल आयकॉन वेगळे आणि बेसिक स्टाईल */
 footer .social-icons,
 footer .social-links {
     display: flex!important;
-    gap: 15px!important; /* आयकॉनमध्ये अंतर */
-    justify-content: flex-start!important;
+    gap: 18px!important;
 }
 
-footer .social-icons a,
-footer .social-links a {
-    background: transparent!important; /* बॅकग्राउंड कलर नाही */
-    background-image: none!important;
-    border: 1px solid #ffffff33!important; /* हलकी पांढरी बॉर्डर */
-    color: #ffffff!important; /* आयकॉन पांढरा */
-    width: 40px!important;
-    height: 40px!important;
+footer .social-icons a {
+    width: 42px!important;
+    height: 42px!important;
     border-radius: 50%!important;
     display: inline-flex!important;
     align-items: center!important;
     justify-content: center!important;
+    margin: 0!important;
     font-size: 18px!important;
-    margin: 0!important; /* एकत्र येणार नाही */
+    background: transparent!important; /* डिफॉल्ट कलर नाही */
+    border: 1.5px solid #ffffff40!important; /* डिफॉल्ट पांढरी बॉर्डर */
+    color: #ffffff!important; /* डिफॉल्ट पांढरा आयकॉन */
 }
 
-/* 3. Hover वर फक्त हलका इफेक्ट */
+/* 3. फक्त Instagram ला ग्रेडियंट कलर दे */
+footer a[href*="instagram.com"] {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)!important;
+    border: none!important; /* बॉर्डर नको */
+    color: #fff!important;
+}
+
+/* 4. फक्त WhatsApp ला हिरवा कलर दे */
+footer a[href*="wa.me"],
+footer a[href*="whatsapp"] {
+    background: #25D366!important;
+    border: none!important; /* बॉर्डर नको */
+    color: #fff!important;
+}
+
+/* 5. Hover इफेक्ट */
 footer .social-icons a:hover {
-    background: #ffffff1a!important; /* हलका पांढरा शेड */
-    border-color: #fff!important;
+    transform: scale(1.1)!important;
+    transition: 0.3s!important;
 }
 </style>
 </body>
