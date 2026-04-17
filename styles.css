@@ -1059,7 +1059,6 @@ img {
 
 /* Footer */
 footer {
-  background-color: #0d021f;
   padding: 60px 80px 20px;
   border-top: 1px solid #2d1656;
 }
@@ -1071,7 +1070,6 @@ footer {
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
-
 .footer-col { flex: 1; min-width: 200px; }
 .footer-col h4 { margin-bottom: 20px; font-size: 18px; }
 .footer-col p, .footer-col li { color: #d1c5e8; font-size: 15px; line-height: 1.8; }
@@ -1359,12 +1357,6 @@ footer {
   margin-right: 8px;
   font-weight: 700;
 }
-
-.footer-links li a:hover {
-  color: #f59e0b;
-  transform: translateX(5px);
-}
-
 .footer-social {
   display: flex;
   gap: 10px;
@@ -1372,25 +1364,17 @@ footer {
 }
 
 .footer-social a {
-  width: 36px;
-  height: 36px;
-  background: #1a0b3d;
-  border: 1px solid #2d1656;
-  border-radius: 8px;
+  width: 42px !important;
+  height: 42px !important;
+  border: 1.5px solid #ffffff40 !important;
+  border-radius: 50% !important;  /* गोल करण्यासाठी */
+  background: transparent !important;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #d1c5e8;
   transition: 0.3s;
 }
-
-.footer-social a:hover {
-  background: #f59e0b;
-  border-color: #f59e0b;
-  color: #1a0b3d;
-  transform: translateY(-3px);
-}
-
 .footer-contact {
   list-style: none;
 }
