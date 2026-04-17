@@ -907,3 +907,17 @@ footer {
 .about-content {
   flex: 1;
 }
+.about-image {
+  display: block !important;
+  flex: 1 !important;
+  min-height: 300px !important;
+  background: red !important;
+}
+
+.about-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
