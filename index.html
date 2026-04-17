@@ -997,5 +997,73 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 </script>
+    <!-- FAQ EMERGENCY FIX - BODY च्या शेवटी टाक -->
+<style>
+/* FAQ - फायनल बॉम्ब */
+#faq {
+    background: linear-gradient(to bottom, #0d3b66 0%, #00b4d8 100%) !important;
+}
+
+#faq .section-badge,
+#faq h2,
+#faq .section-subtitle {
+    color: #fff !important;
+}
+
+#faq .faq-item {
+    background: rgba(255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    margin-bottom: 15px !important;
+}
+
+/* हा सगळ्यात महत्वाचा - button चा पांढरा कलर मारतो */
+#faq button.faq-question {
+    all: unset !important;
+    display: flex !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 20px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+#faq .faq-icon {
+    color: #fff !important;
+    font-size: 24px !important;
+}
+
+#faq .faq-answer {
+    background: rgba(0, 0, 0.15) !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+}
+
+#faq .faq-answer p {
+    color: #e0f7fa !important;
+    padding: 0 20px 20px 20px !important;
+    margin: 0 !important;
+}
+
+#faq .faq-item.active .faq-answer {
+    max-height: 300px !important;
+}
+
+#faq .faq-item.active .faq-icon {
+    transform: rotate(45deg) !important;
+}
+</style>
+
+</body>
+</html>
 </body>
 </html>
