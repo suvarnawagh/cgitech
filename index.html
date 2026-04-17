@@ -1263,5 +1263,38 @@ footer .social-icons a:hover {
     transition: 0.3s!important;
 }
 </style>
+    <style>
+/* 1. Footer पर्पल */
+footer {
+    background: #1a0b3d!important;
+    background-image: none!important;
+}
+
+/* 2. LinkedIn, Facebook, X ला कलर नको - फक्त पांढरी बॉर्डर */
+footer .social-icons a[href*="linkedin"],
+footer .social-icons a[href*="facebook"],
+footer .social-icons a[href*="twitter"],
+footer .social-icons a[href*="x.com"] {
+    background: transparent!important;
+    border: 1.5px solid #ffffff40!important;
+    color: #ffffff!important;
+}
+
+/* 3. सगळे आयकॉन वेगळे कर */
+footer .social-icons {
+    display: flex!important;
+    gap: 20px!important;
+}
+
+footer .social-icons a {
+    width: 40px!important;
+    height: 40px!important;
+    border-radius: 50%!important;
+    display: inline-flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    margin: 0!important;
+}
+</style>
 </body>
 </html>
