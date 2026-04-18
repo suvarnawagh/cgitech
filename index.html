@@ -200,7 +200,7 @@
             </div>
         </div>
 
-        <!-- 8: ERP Solutions - FIXED TYPO -->
+        <!-- 8: ERP Solutions -->
         <div class="service-card-pro" id="erp">
             <div class="card-image">
                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop" alt="ERP Solutions">
@@ -209,7 +209,7 @@
             <div class="card-content">
                 <div class="card-icon">⚙️</div>
                 <h3>ERP SOLUTIONS</h3>
-                <p>Custom ERP software for your business. Manage everything in one place.</p>
+                <p></p>Custom ERP software for your business. Manage everything in one place.</p>
                 <a href="#contact" class="btn-learn-more">Learn More →</a>
             </div>
         </div>
@@ -605,50 +605,48 @@
     appId: "1:123456789:web:abcdef"
   };
 
-  // Firebase initialize कर - WARNING FIX
-  if (firebaseConfig.apiKey !== "TUZA-API-KEY") {
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
-    const reviewsRef = database.ref('reviews');
+  // Firebase initialize कर
+  firebase.initializeApp(firebaseConfig);
+  const database = firebase.database();
+  const reviewsRef = database.ref('reviews');
 
-    // फॉर्म सबमिट झाल्यावर डेटा सेव्ह कर
-    document.getElementById('reviewForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('reviewerName').value;
-      const rating = document.getElementById('reviewerRating').value;
-      const text = document.getElementById('reviewerText').value;
+  // फॉर्म सबमिट झाल्यावर डेटा सेव्ह कर
+  document.getElementById('reviewForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('reviewerName').value;
+    const rating = document.getElementById('reviewerRating').value;
+    const text = document.getElementById('reviewerText').value;
 
-      reviewsRef.push({
-        name: name,
-        rating: rating,
-        text: text,
-        date: new Date().toLocaleDateString('en-IN')
-      });
-
-      alert('Thanks! Your review is now live.');
-      this.reset();
+    reviewsRef.push({
+      name: name,
+      rating: rating,
+      text: text,
+      date: new Date().toLocaleDateString('en-IN')
     });
 
-    // डेटाबेसमध्ये नवीन रिव्ह्यू आला की तो लगेच साईटवर दाखव
-    reviewsRef.on('child_added', function(data) {
-      const review = data.val();
-      const reviewCard = `
-        <div class="testimonial-card active">
-          <div class="quote-icon">“</div>
-          <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
-          <p class="review-text">${review.text}</p>
-          <div class="client-info">
-            <div class="client-avatar">${review.name.charAt(0)}</div>
-            <div>
-              <h4>${review.name.toUpperCase()}</h4>
-              <p>${review.date}</p>
-            </div>
+    alert('Thanks! Your review is now live.');
+    this.reset();
+  });
+
+  // डेटाबेसमध्ये नवीन रिव्ह्यू आला की तो लगेच साईटवर दाखव
+  reviewsRef.on('child_added', function(data) {
+    const review = data.val();
+    const reviewCard = `
+      <div class="testimonial-card active">
+        <div class="quote-icon">“</div>
+        <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+        <p class="review-text">${review.text}</p>
+        <div class="client-info">
+          <div class="client-avatar">${review.name.charAt(0)}</div>
+          <div>
+            <h4>${review.name.toUpperCase()}</h4>
+            <p>${review.date}</p>
           </div>
         </div>
-      `;
-      document.getElementById('reviewsList').innerHTML += reviewCard;
-    });
-  }
+      </div>
+    `;
+    document.getElementById('reviewsList').innerHTML += reviewCard;
+  });
 </script>
         <!-- FAQ SECTION START -->
 <section class="faq" id="faq">
@@ -675,4 +673,609 @@
                 <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-                <p>50% advance and 50% on completion of the project. UPI
+                <p>50% advance and 50% on completion of the project. UPI, bank transfer, card are accepted. EMI facility is available for up to 3 months for large projects.</p>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+            <button class="faq-question">
+               Will I get support after the website is done?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, 1 year free technical support and maintenance. After that you can take AMC. If there is any problem, we solve it immediately.</p>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                When will my website appear on Google?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Once the website goes live, it gets indexed on Google in 1-2 weeks. If you do SEO, you get top rankings in 3-6 months. We provide basic SEO for free.</p>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Is domain and hosting cost separate?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>We provide domain + hosting for free for the first year. After that, there is a renewal cost of ₹2000-₹3000 every year. If you want, you can also take it yourself.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ SECTION END -->
+   <!-- CONTACT SECTION START -->
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <!-- Left Side: Info Cards -->
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h4>OUR OFFICE</h4>
+                    <p>Tanishk Pride, Flat No. 308, Win No A<br>Charoli Budruk, Pune - 412105</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h4>CALL US</h4>
+                    <p>+91 77963 40778<br>Mon - Sat, 10am - 7pm</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <h4>EMAIL US</h4>
+                    <p>cgiindia3031@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">⚡</div>
+                <div>
+                    <h4>RESPONSE TIME</h4>
+                    <p>We reply within 24 hours — usually much faster.</p>
+                </div>
+            </div>
+
+            <div class="social-icons-row">
+                <a href="https://wa.me/917796340778" target="_blank">💬</a>
+                <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank">📷</a>
+                <a href="#" target="_blank">📧</a>
+                <a href="#" target="_blank">🔗</a>
+                <a href="#" target="_blank">📞</a>
+            </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form-wrapper">
+            <form class="contact-form-pro" action="https://formsubmit.co/cgiindia3031@gmail.com" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>FIRST NAME</label>
+                        <input type="text" name="first_name" placeholder="Rahul" required>
+                    </div>
+                    <div class="form-group">
+                        <label>LAST NAME</label>
+                        <input type="text" name="last_name" placeholder="Sharma" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>EMAIL ADDRESS</label>
+                        <input type="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>PHONE NUMBER</label>
+                        <input type="tel" name="phone" placeholder="+91 99999 99999" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>BUDGET RANGE</label>
+                    <select name="budget" required>
+                        <option value="" disabled selected>Select your budget...</option>
+                        <option value="10k-25k">₹10,000 - ₹25,000</option>
+                        <option value="25k-50k">₹25,000 - ₹50,000</option>
+                        <option value="50k-1L">₹50,000 - ₹1,00,000</option>
+                        <option value="1L+">₹1,00,000+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>YOUR MESSAGE</label>
+                    <textarea name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+                </div>
+
+                <!-- Formsubmit settings -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://cgitechsolution.github.io/cgitech/thanks.html">
+                <input type="hidden" name="_subject" value="New Lead from CGI Tech Solutions Website!">
+
+                <button type="submit" class="btn-submit">Send Message →</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- CONTACT SECTION END -->
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <!-- Column 1: Logo + Social -->
+        <div class="footer-col">
+            <div class="logo footer-logo">
+                <div class="logo-icon">CGI</div>
+                <span>CGI Tech Solutions</span>
+            </div>
+            <p>High-performing websites & data-driven marketing strategies that transform businesses online.</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank" aria-label="Instagram">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9s51.3 114.9-114.9S287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8s12-26.8 26.8-26.8 26.8 12 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                    <svg height="18" width="18" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Facebook">
+                    <svg height="18" width="18" fill="currentColor" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                </a>
+                    <svg height="18" width="18" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Facebook">
+                    <svg height="18" width="18" fill="currentColor" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter">
+                    <svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4 class="footer-title">QUICK LINKS</h4>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#clients">Our Clients</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="footer-col">
+            <h4 class="footer-title">OUR SERVICES</h4>
+            <ul class="footer-links">
+                <li><a href="#social-media">Social Media Marketing</a></li>
+                <li><a href="#sem">Search Engine Marketing</a></li>
+                <li><a href="#personal-branding">Personal Branding</a></li>
+                <li><a href="#web-development">Web Development</a></li>
+                <li><a href="#app-development">App Development</a></li>
+                <li><a href="#seo">SEO</a></li>
+                <li><a href="#whatsapp-api">WhatsApp API</a></li>
+                <li><a href="#erp">ERP</a></li>
+                <li><a href="#video-production">Video Production</a></li>
+                <li><a href="#ai-chatbot">AI Chatbot</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Get In Touch + Map + Newsletter -->
+        <div class="footer-col">
+            <h4 class="footer-title">GET IN TOUCH</h4>
+            <ul class="footer-contact">
+                <li><span>📞</span> +91 77963 40778</li>
+                <li><span>✉️</span> cgicrafters007@gmail.com</li>
+                <li><span>📍</span> Tanishk Pride, Flat No. 308,<br>Charoli Budruk, Pune - 412105</li>
+            </ul>
+
+            <div class="map-box">
+              <iframe 
+                src="https://maps.google.com/maps?q=Tanishk%20Pride%20Charoli%20Budruk%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="150" 
+                style="border:0; border-radius:8px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <h4 class="footer-title newsletter-title">NEWSLETTER</h4>
+            <p class="newsletter-text">Get tips, trends & offers in your inbox.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 CGI Tech Solutions. All Rights Reserved.</p>
+    </div>
+</footer>
+<div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+<div class="social-float">
+    <a href="https://wa.me/917796340778?text=Hi%20CGI%20Tech%20Solutions%2C%20I%20saw%20your%20website.%20I%20want%20a%20website%20for%20my%20business." target="_blank" class="whatsapp-float">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank" class="instagram-float">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="white" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+</div>
+    </div>
+    <script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-menu');
+  });
+</script>
+
+    <!-- TESTIMONIAL SLIDER JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentSlide = 0;
+
+            if (slides.length === 0) return;
+
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            if(nextBtn) nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+            if(prevBtn) prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    showSlide(parseInt(this.getAttribute('data-slide')));
+                });
+            });
+            setInterval(() => showSlide(currentSlide + 1), 5000);
+        });
+    </script>
+    <!-- FAQ Accordion JS -->
+    <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+    </script>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 5L12 19M12 5L6 11M12 5L18 11" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <!-- Scroll Progress + Back to Top JS -->
+    <script>
+    const progressBar = document.getElementById('progressBar');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + '%';
+
+        if (scrollTop > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    </script>
+    <script>
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
+    });
+});
+</script>
+    <!-- FAQ FINAL - PURPLE THEME + NO YELLOW BOXES -->
+<style>
+/* FAQ Section - Site च्या Purple थीम मध्ये */
+#faq {
+    background: #1a0b3d !important;
+    padding: 80px 5% !important;
+}
+
+#faq .section-badge {
+    background: rgba(255, 193, 7, 0.1) !important;
+    color: #ffc107 !important;
+    border: 1px solid #ffc107 !important;
+    display: table !important;
+    margin: 0 auto 15px !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+}
+
+#faq h2 {
+    color: #fff !important;
+    text-align: center !important;
+    font-size: 36px !important;
+    margin-bottom: 10px !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+#faq .section-subtitle {
+    color: #d1c5e8 !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+#faq .faq-container {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+/* FAQ बॉक्स - साईटच्या थीम प्रमाणे */
+#faq .faq-item {
+    background: rgba(13, 2, 31, 0.6) !important;
+    border: 1px solid #2d1656 !important;
+    border-radius: 12px !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+    transition: 0.3s !important;
+}
+
+#faq .faq-item:hover {
+    border-color: #ffc107 !important;
+}
+
+/* पिवळा बटण मारणारा - फायनल */
+#faq button.faq-question {
+    all: unset !important;
+    display: flex !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    padding: 20px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    font-family: 'Poppins', sans-serif !important;
+    cursor: pointer !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: left !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+#faq button.faq-question:hover,
+#faq button.faq-question:focus,
+#faq button.faq-question:active {
+    background: rgba(255, 193, 7, 0.1) !important;
+    background-color: rgba(255, 193, 7, 0.1) !important;
+    background-image: none !important;
+    color: #ffc107 !important;
+}
+
+#faq .faq-icon {
+    color: #ffc107 !important;
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    transition: transform 0.3s ease !important;
+}
+
+#faq .faq-answer {
+    background: #0d021f !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+}
+
+#faq .faq-answer p {
+    color: #d1c5e8 !important;
+    padding: 0 20px 20px 20px !important;
+    margin: 0 !important;
+    line-height: 1.6 !important;
+}
+
+#faq .faq-item.active .faq-answer {
+    max-height: 300px !important;
+}
+
+#faq .faq-item.active .faq-icon {
+    transform: rotate(45deg) !important;
+    color: #ffc107 !important;
+}
+
+#faq .faq-item.active {
+    border-color: #ffc107 !important;
+}
+</style>
+    <style>
+/* Full site one color theme */
+body,
+.hero,
+.services,
+.portfolio,
+#faq,
+.contact,
+footer {
+    background: #1a0b3d !important;
+    background-color: #1a0b3d !important;
+    background-image: none !important;
+}
+
+/* Section मधले बॉक्स थोडे डार्क ठेव म्हणजे कॉन्ट्रास्ट राहील */
+.service-card,
+.portfolio-item,
+.faq-item {
+    background: #0d021f !important;
+    border: 1px solid #2d1656 !important;
+}
+
+/* FAQ बटण ट्रान्सपरंट ठेव */
+#faq button.faq-question {
+    background: transparent !important;
+}
+</style>
+    <style>
+/* === FULL SITE PURPLE THEME - ALL SECTIONS === */
+
+/* 1. All main sections purple */
+body,
+section,
+.hero,
+.services,
+.portfolio,
+.clients, 
+.happy-clients, 
+.testimonials,
+.insights,
+.latest-insights,
+.blog,
+.blogs,
+.news-section,
+#faq,
+.contact,
+footer {
+    background: #1a0b3d !important;
+    background-image: none !important;
+}
+
+/* 2. All cards and boxes dark purple for contrast */
+.service-card, 
+.portfolio-item, 
+.faq-item,
+.clients .client-box,
+.happy-clients .logo-box,
+.insights .blog-card,
+.latest-insights .post-box,
+.blog .article-box {
+    background: #0d021f !important;
+    border: 1px solid #2d1656 !important;
+}
+
+/* 3. Client logo boxes white राहू दे, फक्त background डार्क */
+.clients img {
+    background: transparent !important;
+}
+</style>
+    <style>
+/* Hero मधले सगळे बटण फिक्स कर */
+.hero a,
+.hero button,
+.hero .btn,
+.banner a,
+.banner button {
+    color: #ffffff!important; /* टेक्स्ट पांढरा */
+    background: transparent!important; /* बॅकग्राउंड ट्रान्सपरंट */
+    border: 2px solid #ffc107!important; /* पिवळी बॉर्डर */
+    padding: 12px 30px!important;
+    border-radius: 30px!important;
+    text-decoration: none!important;
+    display: inline-block!important;
+}
+
+/* बटणावर माउस नेला की पिवळा होईल */
+.hero a:hover,
+.hero button:hover,
+.hero .btn:hover {
+    background: #ffc107!important;
+    color: #1a0b3d!important; /* टेक्स्ट पर्पल */
+    border-color: #ffc107!important;
+}
+</style>
+
+<style>
+/* === FOOTER + SOCIAL ICONS FINAL FIX === */
+
+/* 1. Footer जबरदस्तीने पर्पल कर */
+footer {
+    background: #1a0b3d!important;
+    background-image: none!important;
+}
+
+/* 2. तुझा क्लास footer-social आहे, social-icons नाही */
+footer .footer-social {
+    display: flex!important;
+    gap: 20px!important;
+    align-items: center!important;
+    margin-top: 15px!important;
+}
+
+footer .footer-social a {
+    width: 42px!important;
+    height: 42px!important;
+    border-radius: 50%!important;
+    display: inline-flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    background: transparent!important; /* डिफॉल्ट कलर नाही */
+    border: 1.5px solid #ffffff40!important; /* फक्त पांढरी रिंग */
+    color: #ffffff!important; /* डिफॉल्ट पांढरा आयकॉन */
+    margin: 0!important;
+}
+
+/* 3. LinkedIn, Facebook, X ला कलर नकोच */
+footer .footer-social a[href*="linkedin"],
+footer .footer-social a[href*="facebook"],
+footer .footer-social a[href*="twitter"],
+footer .footer-social a[href*="x.com"] {
+    background: transparent!important;
+    background-image: none!important;
+}
+
+/* 4. फक्त Instagram ला ग्रेडियंट कलर */
+footer .footer-social a[href*="instagram"] {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)!important;
+    border: none!important;
+    color: #fff!important;
+}
+
+/* 5. WhatsApp फ्लोटिंग बटण हिरवं */
+.social-float .whatsapp-float {
+    background: #25D366!important;
+}
+
+/* 6. Hover इफेक्ट */
+footer .footer-social a:hover {
+    transform: translateY(-3px)!important;
+    transition: 0.3s!important;
+}
+footer{background:#1a0b3d!important;}
+footer .footer-social{display:flex!important;gap:20px!important;}
+footer .footer-social a{width:42px!important;height:42px!important;border-radius:50%!important;background:transparent!important;border:1.5px solid #ffffff40!important;color:#fff!important;}
+footer .footer-social a[href*="instagram"]{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)!important;border:none!important;}
+</style>
+</body>
+</html>
