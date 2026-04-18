@@ -2808,3 +2808,24 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffc107;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    background: #ffc107;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+}
