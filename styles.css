@@ -103,18 +103,26 @@ nav a.active { border-bottom: 2px solid #ffc107; padding-bottom: 5px; }
 }
 .hero p { font-size: 18px; margin-bottom: 40px; color: #d1c5e8; }
 .hero-buttons { display: flex; gap: 20px; justify-content: center; }
+
 .btn-primary {
+  background: #ffc107;
+  border: 2px solid #ffc107;
   padding: 15px 35px;
   border-radius: 30px;
   color: #1a0b3d;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
+  display: inline-block;
 }
+
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(255, 193, 7, 0.3);
+  background: #f59e0b;
+  border-color: #f59e0b;
 }
+
 .btn-secondary {
   border: 1px solid #ffc107;
   padding: 15px 35px;
@@ -123,17 +131,14 @@ nav a.active { border-bottom: 2px solid #ffc107; padding-bottom: 5px; }
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
-}
-.btn-secondary:hover { background: rgba(255, 193, 7, 0.1); }
-.section-badge {
   display: inline-block;
-  border: 1px solid #ffc107;
-  padding: 6px 18px;
-  border-radius: 25px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+}
+
+.btn-secondary:hover { 
+  background: rgba(255, 193, 7, 0.1); 
+  transform: translateY(-3px);
   color: #ffc107;
+}
 }
 .services {
   padding: 80px 5%;
