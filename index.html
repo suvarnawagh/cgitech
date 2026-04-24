@@ -99,7 +99,29 @@
                 </div>
             </div>
         </section>
-
+<!-- Stats Counter Section - NEW -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3 class="counter" data-target="75">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="99">0</h3>
+        <p>Client Satisfaction %</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="6">0</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="24">0</h3>
+        <p>Hours Support</p>
+      </div>
+    </div>
+  </div>
+</section>
      <!-- SERVICES SECTION START -->
 <section class="services" id="services">
     <div class="section-badge">OUR SERVICES</div>
@@ -263,6 +285,42 @@
     </div>
 </section>
 <!-- SERVICES SECTION END -->
+        <!-- Tech Stack Section - NEW -->
+<section class="tech-stack">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Our Tech Stack</div>
+      <h2>Industry-Leading Software</h2>
+      <p>We use Hollywood-grade tools to deliver photorealistic results for your CGI & VFX projects.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender">
+        <p>Blender</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://help.autodesk.com/cloudhelp/2022/ENU/Maya/images/GUID-3D4B2C3D-5A3D-4A3D-8A3D-3D4B2C3D5A3D.png" alt="Maya">
+        <p>Maya</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://www.sidefx.com/media/uploads/logos/houdini_logo.png" alt="Houdini">
+        <p>Houdini</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://cdn2.unrealengine.com/ue-logotype-2023-vertical-white-1686x2048-bbfded26daa7.png" alt="Unreal Engine">
+        <p>Unreal Engine 5</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_After_Effects_CC_icon.svg" alt="After Effects">
+        <p>After Effects</p>
+      </div>
+      <div class="tech-item">
+        <img src="https://www.foundry.com/sites/default/files/inline-images/nuke-family-logo-black.png" alt="Nuke">
+        <p>Nuke</p>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section class="about" id="about">
             <div class="about-image">
@@ -1122,6 +1180,25 @@ document.querySelectorAll('.faq-question').forEach(button => {
 #faq .faq-item.active {
     border-color: #ffc107 !important;
 }
+    /* Stats Counter - NEW */
+.stats {padding:80px 20px;background:#1e293b;border-top:1px solid rgba(148,163,184,0.1);border-bottom:1px solid rgba(148,163,184,0.1);}
+.stats-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;text-align:center;max-width:1200px;margin:0 auto;}
+.stat-item h3 {font-size:3rem;font-weight:800;background:linear-gradient(90deg,#00dbde,#fc00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;}
+.stat-item p {color:#94a3b8;font-weight:500;}
+@media (max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);}.stat-item h3{font-size:2.5rem;}}
+
+/* Tech Stack - NEW */
+.tech-stack {padding:100px 20px;background:#0a0a0a;}
+.section-header {text-align:center;max-width:600px;margin:0 auto 60px;}
+.section-badge {display:inline-block;padding:6px 16px;background:rgba(252,0,255,0.1);border:1px solid rgba(252,0,255,0.3);border-radius:50px;color:#fc00ff;font-size:14px;font-weight:600;margin-bottom:16px;}
+.section-header h2 {font-size:2.5rem;font-weight:800;margin-bottom:16px;color:#fff;}
+.section-header p {color:#aaa;font-size:1.125rem;}
+.tech-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:40px;align-items:center;justify-items:center;max-width:1000px;margin:0 auto;}
+.tech-item {text-align:center;opacity:0.6;transition:0.3s;}
+.tech-item:hover {opacity:1;transform:translateY(-5px);}
+.tech-item img {width:60px;height:60px;object-fit:contain;margin-bottom:8px;filter:grayscale(100%);}
+.tech-item:hover img {filter:grayscale(0%);}
+.tech-item p {font-size:14px;color:#aaa;}
 </style>
     <style>
 /* Full site one color theme */
@@ -1288,6 +1365,35 @@ footer .footer-social a{width:42px!important;height:42px!important;border-radius
   const database = firebase.database();
 </script>
 <!-- Firebase Script END -->
+        // Animated Counter - NEW
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = target / speed;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      observer.unobserve(entry.target);
+    }
+  });
+});
+const statsSection = document.querySelector('.stats');
+if(statsSection) observer.observe(statsSection);
 </body>
 </html>
 </body>
