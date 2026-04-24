@@ -1357,22 +1357,30 @@ footer .footer-social{display:flex!important;gap:20px!important;}
 footer .footer-social a{width:42px!important;height:42px!important;border-radius:50%!important;background:transparent!important;border:1.5px solid #ffffff40!important;color:#fff!important;}
 </style>
         <!-- Firebase Script START -->
-  <script>
-  // 1. Contact Form Submit Track Karne
-  document.querySelector('form')?.addEventListener('submit', function() {
-    gtag('event', 'generate_lead', {
-      'method': 'Contact Form'
-    });
-  });
-
-  // 2. WhatsApp Button Click Track Karne
+ <script>
+// Page purna load zalyavar events add kar
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // 1. WhatsApp Button Click Track Karne
   document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(btn) {
     btn.addEventListener('click', function() {
       gtag('event', 'whatsapp_click', {
         'method': 'WhatsApp Button'
       });
+      console.log('WhatsApp Click GA4 la pathavla'); 
     });
   });
+
+  // 2. Contact Form Submit Track Karne
+  var form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function() {
+      gtag('event', 'generate_lead', {
+        'method': 'Contact Form'
+      });
+      console.log('Form Submit GA4 la pathavla');
+    });
+  }
 
   // 3. Phone Number Click Track Karne
   document.querySelectorAll('a[href^="tel:"]').forEach(function(btn) {
@@ -1382,6 +1390,8 @@ footer .footer-social a{width:42px!important;height:42px!important;border-radius
       });
     });
   });
+
+});
 </script>
 </body>
 </html>
