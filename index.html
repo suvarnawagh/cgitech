@@ -159,39 +159,54 @@ body {
 }
     </style>
     <style>
-/* FIX 1: Particles sathi base */
+/* PARTICLES PURN SITE SATHI */
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background: #0a0a1a;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+    pointer-events: none; /* Buttons click vhayla pahije */
+    background: #0a0a1a !important;
 }
 
-/* FIX 2: Tuzha hero section transparent kar */
-.hero, .hero-section, #hero {
+/* SAGLE SECTIONS TRANSPARENT + VAR */
+body {
+    background: #0a0a1a !important;
+}
+
+header, nav, main, section, footer, 
+.hero, .stats, .services, .portfolio, .contact, .container {
+    position: relative !important;
+    z-index: 2 !important;
     background: transparent !important;
     background-color: transparent !important;
-    position: relative;
-    z-index: 2;
 }
 
-/* FIX 3: Header pan var anaycha */
-header, nav {
-    position: relative;
-    z-index: 3;
+/* BOOTSTRAP CHE BG CLASSES BAND KAR */
+.bg-dark, .bg-primary, .bg-light, [class*="bg-"] {
+    background: transparent !important;
+    background-color: transparent !important;
 }
 
-/* FIX 4: Baki sagle section pan var */
-section, footer {
-    position: relative;
-    z-index: 2;
+/* CONTENT READABLE RAHNYASATHI THODA DARK OVERLAY */
+.hero::before, section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 26, 0.3); /* 30% dark overlay */
+    z-index: -1;
 }
 </style>
 </head>
 <body>
+<div id="particles-js"></div>
+<!-- Tuzha header, main, sagla code yachya khali -->
+<header>
 <!-- Top Marquee Start -->
 <div class="top-bar">
    <div class="marquee-wrapper">
@@ -206,7 +221,6 @@ section, footer {
    </div>
 </div>
 <!-- Top Marquee End -->
- <header>
     <div class="logo">
         <div class="logo-icon">CGI</div>
         CGI Tech Solutions
@@ -1884,21 +1898,28 @@ if(statsSection) {
     offset: 100
   });
 </script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
 particlesJS('particles-js', {
   "particles": {
-    "number": { "value": 100 },
-    "color": { "value": ["#FFD700", "#FFC107"] },
+    "number": { "value": 150 }, // Purn site sathi jast particles
+    "color": { "value": ["#FFD700", "#FFC107", "#FFB300"] },
     "shape": { "type": "circle" },
-    "opacity": { "value": 0.8, "random": true },
-    "size": { "value": 4, "random": true },
-    "line_linked": { "enable": true, "distance": 150, "color": "#FFD700", "opacity": 0.4, "width": 1 },
-    "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "out_mode": "out", "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 } }
+    "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 0.8 } },
+    "size": { "value": 3, "random": true },
+    "line_linked": { "enable": true, "distance": 150, "color": "#FFD700", "opacity": 0.3, "width": 1 },
+    "move": { 
+      "enable": true, 
+      "speed": 1.5, 
+      "direction": "none", 
+      "random": true, 
+      "out_mode": "out", 
+      "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 } // Wavy effect
+    }
   },
   "interactivity": {
-    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
-    "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 3 } }
+    "events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
+    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.6 } } }
   },
   "retina_detect": true
 });
