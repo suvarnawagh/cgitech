@@ -7,6 +7,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+    /* PRICING CARDS PERFECT GRID */
+.service-cards {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+    align-items: stretch !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.service-card-pro {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    background: #1a0b3d !important;
+    border: 2px solid #2d1656 !important;
+    border-radius: 20px !important;
+    padding: 35px 25px !important;
+}
+
+.service-card-pro .card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    text-align: center !important;
+}
+
+/* FEATURES - EKA KHALI EK + CENTER */
+.service-features {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 25px 0 !important;
+    text-align: left !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.service-features li {
+    padding: 0 !important;
+    color: #d1c5e8 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.service-features li::marker {
+    display: none !important;
+}
+
+/* BUTTON BOTTOM LA FIX */
+.btn-learn-more {
+    margin-top: auto !important;
+    padding: 12px 30px !important;
+    background: transparent !important;
+    border: 2px solid #ffc107 !important;
+    color: #ffc107 !important;
+    border-radius: 30px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+/* MOBILE SATHI */
+@media (max-width: 768px) {
+    .service-cards {
+        grid-template-columns: 1fr !important;
+    }
+}
+    </style>
 </head>
 <body>
     <div class="top-bar">
