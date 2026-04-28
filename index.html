@@ -1770,6 +1770,49 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+    <script>
+// Stats Counter Animation
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if(current < target) {
+        counter.innerText = Math.ceil(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCounter();
+  });
+}
+
+// Stats section screen var disla ki counter chalu kar
+const statsSection = document.querySelector('.stats');
+if(statsSection) {
+  const observer = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting) {
+      animateCounters();
+      observer.unobserve(statsSection);
+    }
+  }, { threshold: 0.5 });
+  observer.observe(statsSection);
+}
+</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+</script>
 </body>
 </html>
 
