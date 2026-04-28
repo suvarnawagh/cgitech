@@ -2881,3 +2881,89 @@ footer {
     font-weight: 700;
     font-size: 18px;
 }
+/* CONTACT INFO - FINAL ALIGNMENT FIX */
+#contact .contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+#contact .contact-info .info-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    background: rgba(13, 2, 31, 0.95) !important;
+    border: 1px solid #2d1656 !important;
+    border-radius: 16px !important;
+    padding: 22px 25px !important;
+    gap: 20px !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+#contact .contact-info .info-card > .info-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    background: rgba(255, 193, 7, 0.15) !important;
+    border-radius: 12px !important;
+    font-size: 26px !important;
+    color: #ffc107 !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+#contact .contact-info .info-card > div:last-child {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-align: left !important;
+    min-width: 0 !important;
+}
+
+#contact .contact-info .info-card h4 {
+    display: block !important;
+    color: #ffc107 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+    letter-spacing: 1.2px !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    width: 100% !important;
+}
+
+#contact .contact-info .info-card p {
+    display: block !important;
+    color: #d1c5e8 !important;
+    font-size: 15px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    #contact .contact-info .info-card {
+        padding: 18px 20px !important;
+        gap: 15px !important;
+    }
+    #contact .contact-info .info-card > .info-icon {
+        width: 45px !important;
+        height: 45px !important;
+        min-width: 45px !important;
+        font-size: 24px !important;
+    }
+}
