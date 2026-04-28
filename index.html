@@ -135,7 +135,7 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-        
+
         /* Heading Animation */
         .hero h1 {
             opacity: 0;
@@ -145,57 +145,264 @@
         @keyframes fadeInUp {
             to { opacity: 1; transform: translateY(0); }
         }
-      <style>
-/* ===== SCROLL + LAYOUT FINAL FIX ===== */
-html, body {
-    height: auto !important;
-    min-height: 100vh !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    background: #1A0B2E !important;
-    margin: 0 !important;
-    padding: 0 !important;
+        /* Animated Gradient Background */
+body {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a1a2e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
-/* Marquee Fixed */
-.top-bar {
-    background: #FFB800 !important;
-    padding: 6px 0 !important;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+    </style>
+<style>
+/* ===== LOGO SIZE FIX - HACH TAK ===== */
+.software-logos {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 50px 30px !important;
+    align-items: center !important;
+}
+
+.logo-item {
+    text-align: center !important;
+    height: auto !important;
+}
+
+.logo-item img {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    object-fit: contain !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+}
+
+.logo-item p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .software-logos { 
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px 20px !important;
+    }
+    .logo-item img {
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+    }
+}
+</style>
+<style>
+/* ===== 1. BODY LA EKCH COLOR FORCE KAR ===== */
+html, body, main, #__next, #root {
+    background: #2D1B69 !important;
+    background-color: #2D1B69 !important;
+    background: #1A0B2E !important;
+    background-color:#1A0B2E!important;
+    background-image: none !important;
+}
+
+/* PARTICLES LA PAN SAME PURPLE */
+#particles-js {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    z-index: 999999 !important;
-    height: 36px !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+    pointer-events: none;
+    background: #2D1B69 !important;
+    background:#1A0B2E !important;
 }
 
-.top-bar .marquee-text span {
-    color: #000000 !important;
-    font-weight: 800 !important;
-    font-size: 14px !important;
+/* ===== 2. YELLOW/ORANGE LA KILL KAR - BOOTSTRAP OVERRIDE ===== */
+.bg-warning,
+.bg-orange,
+.bg-yellow,
+.bg-primary,
+.bg-info,
+.bg-light,
+.bg-gradient,
+[class*="bg-"],
+[class*="orange"],
+[class*="yellow"],
+[style*="background: orange"],
+[style*="background-color: orange"],
+[style*="background: yellow"],
+[style*="background-color: rgb(255"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
 }
 
-body {
-    padding-top: 36px !important; /* Marquee sathi jaga */
-}
-
-/* Particles/Animation band - toch scroll marat hota */
-#particles-js, .bg-animation, [class*="particle"] {
-    display: none !important;
-}
-
-/* Saglya section la scroll allow kar */
-header, nav, section, main, footer, .hero, .container, div {
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
+/* ===== 3. TECH STACK SECTION LA TRANSPARENT KAR ===== */
+.tech-stack-section {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    padding: 100px 20px !important;
     position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ===== 4. PSEUDO-ELEMENT CHA YELLOW PAN BAND KAR ===== */
+.tech-stack-section::before,
+.tech-stack-section::after,
+.container::before,
+.container::after,
+body *::before,
+body *::after {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* ===== 5. TEXT + LOGO STYLE ===== */
+.tech-stack-content {
+    text-align: center !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    z-index: 11 !important;
+}
+
+.tech-stack-content .tag {
+    display: inline-block !important;
+    background: rgba(192, 132, 252, 0.15) !important;
+    color: #C084FC !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+}
+
+.tech-stack-content h1 {
+    color: #FFFFFF !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+}
+
+.tech-stack-content p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 18px !important;
+    margin-bottom: 60px !important;
+}
+
+.software-logos {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 50px 30px !important;
+    align-items: center !important;
+}
+
+.logo-item {
+    text-align: center !important;
+}
+
+.logo-item img {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    object-fit: contain !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+}
+
+.logo-item p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .software-logos { 
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px 20px !important;
+    }
+    .tech-stack-content h1 { font-size: 32px !important; }
+    .logo-item img {
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+    }
+}
+    <style>
+/* ===== HERO SECTION CHA TEXT WHITE + GLOW ===== */
+.hero h1,
+.hero h2,
+.hero h3,
+section h1,
+h1,
+h2 {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5) !important; /* Golden Glow */
+    position: relative !important;
+    z-index: 20 !important;
+    opacity: 1 !important;
+}
+
+/* HERO CHA BAKI TEXT PAN WHITE */
+.hero p, 
+.hero span,
+.hero .welcome-text {
+    color: #FFFFFF !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+
+/* "Top Website Agency" SPECIFIC FIX */
+.hero h1 {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+}
+
+/* BUTTONS GOLDEN BORDER MADHE */
+.hero .btn, 
+.hero button, 
+.get-started, 
+.our-work,
+.hero a[class*="btn"] {
+    border: 2px solid #FFD700 !important;
+    color: #FFD700 !important;
+    background: transparent !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+
+.hero .btn:hover {
+    background: #FFD700 !important;
+    color: #2D1B69 !important;
+}
+
+/* "CGI Tech Solutions" LOGO PAN WHITE */
+.navbar-brand, 
+.logo-text,
+header h1 {
+    color: #FFFFFF !important;
 }
 </style>
 </head>
 <body>
-
-     <!-- Top Marquee Start -->
+    <!-- Top Marquee Start -->
     <div class="top-bar">
        <div class="marquee-wrapper">
           <div class="marquee-text">
@@ -210,13 +417,13 @@ header, nav, section, main, footer, .hero, .container, div {
         <div class="logo-icon">CGI</div>
         CGI Tech Solutions
     </div>  
-    
+
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    
+
     <nav>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">HOME</a></li>
-            
+
             <li class="dropdown">
                 <a href="#services">SERVICES ▼</a>
                 <ul class="dropdown-menu">
@@ -233,7 +440,7 @@ header, nav, section, main, footer, .hero, .container, div {
                     <li><a href="cloud-solutions.html">Cloud Solutions</a></li>
                 </ul>
             </li>
-            
+
             <li><a href="index.html#about">ABOUT US</a></li>
             <li><a href="index.html#portfolio">PORTFOLIO</a></li>
             <li><a href="index.html#clients">CLIENTS</a></li>
@@ -244,6 +451,7 @@ header, nav, section, main, footer, .hero, .container, div {
         </ul>
     </nav>
 </header>
+
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
@@ -251,14 +459,14 @@ header, nav, section, main, footer, .hero, .container, div {
   <h1>Top Website Agency for Nagpur & Pune</h1>  
 <h2 style="color:#FFD700;font-size:24px;margin:10px 0;">Get Your Professional Website in 7 Days from ₹9,999</h2> 
 <p>100+ Local Businesses Trust Us. Achieve #1 Google Rankings. Generate Leads Every Day.</p>
-                
+
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">Get Started</a>
                     <a href="#portfolio" class="btn-secondary">Our Work</a>
                 </div>
             </div>
         </section>
-        
+
 <!-- Stats Counter Section - NEW -->
 <section class="stats">
   <div class="container">
@@ -291,7 +499,7 @@ header, nav, section, main, footer, .hero, .container, div {
     <p class="section-subtitle" style="color:#d1c5e8;text-align:center;margin-bottom:50px;">7 Divsat Website. 1 Varsh Free Support. 100% Money Back Guarantee</p>
 
     <div class="pricing-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:0 auto;">
-      
+
       <!-- PLAN 1: BASIC ₹9,999 -->
       <div class="price-card" style="background:#0d021f;border:1px solid #2d1656;border-radius:16px;padding:35px 25px;text-align:center;position:relative;">
         <h3 style="color:#fff;font-size:24px;margin-bottom:10px;">BASIC</h3>
@@ -355,7 +563,7 @@ header, nav, section, main, footer, .hero, .container, div {
   <div style="max-width:1200px;margin:0 auto;text-align:center;">
     <div class="section-badge" style="background:rgba(255,193,7,0.1);color:#ffc107;border:1px solid #ffc107;display:table;margin:0 auto 15px;padding:6px 16px;border-radius:20px;">HOW IT WORKS</div>
     <h2 style="color:#fff;font-size:36px;margin-bottom:50px;font-family:'Playfair Display',serif;">Get Your Website Ready in Just 3 Steps</h2>
-    
+
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;">
       <!-- Step 1 -->
       <div style="background:#0d021f;border:1px solid #2d1656;border-radius:16px;padding:30px;position:relative;">
@@ -383,7 +591,7 @@ header, nav, section, main, footer, .hero, .container, div {
   <div class="container" style="max-width:1200px;margin:0 auto;">
     <div class="section-badge" style="background:rgba(255,193,7,0.1);color:#ffc107;border:1px solid #ffc107;display:table;margin:0 auto 15px;padding:6px 16px;border-radius:20px;">WHY CGI TECH?</div>
     <h2 style="color:#fff;text-align:center;font-size:36px;margin-bottom:50px;font-family:'Playfair Display',serif;">CGI Tech vs Dusre Freelancers</h2>
-    
+
     <div style="overflow-x:auto;">
       <table style="width:100%;border-collapse:collapse;background:#1a0b3d;border-radius:12px;overflow:hidden;">
         <thead>
@@ -477,7 +685,7 @@ header, nav, section, main, footer, .hero, .container, div {
         </div>
 
         <!-- 4: SEM -->
-  
+
         <div class="service-card-pro" id="sem" data-aos="fade-up" data-aos-delay="400">
             <div class="card-image">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Search Engine Marketing">
@@ -506,7 +714,7 @@ header, nav, section, main, footer, .hero, .container, div {
         </div>
 
         <!-- 6: SEO -->
-    
+
         <div class="service-card-pro" id="seo" data-aos="fade-up" data-aos-delay="600">
             <div class="card-image">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop" alt="SEO">
@@ -521,7 +729,7 @@ header, nav, section, main, footer, .hero, .container, div {
         </div>
 
         <!-- 7: WhatsApp API -->
- 
+
 <div class="service-card-pro" id="whataap-api" data-aos="fade-up" data-aos-delay="700">
             <div class="card-image">
                 <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&auto=format&fit=crop" alt="WhatsApp API">
@@ -581,7 +789,7 @@ header, nav, section, main, footer, .hero, .container, div {
         </div>
 
         <!-- 11: Cloud Solutions -->
-   
+
 <div class="service-card-pro" id="cloud-solution" data-aos="fade-up" data-aos-delay="1100">
             <div class="card-image">
                 <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&auto=format&fit=crop" alt="Cloud Solutions">
@@ -604,33 +812,33 @@ header, nav, section, main, footer, .hero, .container, div {
         <span class="tag">Our Tech Stack</span>
         <h1>Industry-Leading Software</h1>
         <p>We use Hollywood-grade tools to deliver photorealistic results for your CGI & VFX projects.</p>
-        
+
        <div class="software-logos">
     <div class="logo-item">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender">
         <p>Blender</p>
     </div>
-    
+
     <div class="logo-item">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maya/maya-original.svg" alt="Maya">
         <p>Maya</p>
     </div>
-    
+
     <div class="logo-item">
               <img src="https://img.icons8.com/ios-filled/50/FFFFFF/houdini.png" alt="Houdini">
         <p>Houdini</p>
     </div>
-    
+
     <div class="logo-item">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" alt="Unreal Engine 5">
         <p>Unreal Engine 5</p>
     </div>
-    
+
     <div class="logo-item">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" alt="After Effects">
         <p>After Effects</p>
     </div>
-    
+
     <div class="logo-item">
         <img src="https://cdn.simpleicons.org/nuke/FFFFFF" alt="Nuke">
         <p>Nuke</p>
@@ -1069,17 +1277,17 @@ function filterPortfolio(category) {
   // डेटाबेसमध्ये नवीन रिव्ह्यू आला की तो लगेच साईटवर दाखव
   reviewsRef.on('child_added', function(data) {
     const review = data.val();
-    
+
     // FIX 1: Jar data nasel tar return kar
     if (!review) return;
-    
+
     // FIX 2: Safe values de, undefined asel tar default
     const name = review.name || 'Anonymous';
     const rating = Number(review.rating) || 5;
     const text = review.text || '';
     const date = review.date || new Date().toLocaleDateString('en-IN');
     const firstLetter = name.charAt(0).toUpperCase(); // Aata safe aahe
-    
+
     const reviewCard = `
       <div class="testimonial-card" data-aos="fade-up">
         <div class="quote-icon">“</div>
@@ -1274,7 +1482,7 @@ function filterPortfolio(category) {
   </div>
 </section>
 <!-- TRUST BADGES END -->
-        
+
 <footer>
     <div class="footer-content">
         <!-- Column 1: Logo + Social -->
@@ -1294,7 +1502,7 @@ function filterPortfolio(category) {
     <a href="#" target="_blank" aria-label="Twitter">
         <svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
     </a>
-    
+
     <!-- हे नवीन Instagram icon add कर 👇 -->
     <a href="https://www.instagram.com/cgi_tech_solutions" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
@@ -1362,17 +1570,6 @@ function filterPortfolio(category) {
         <p>&copy; 2026 CGI Tech Solutions. All Rights Reserved.</p>
     </div>
 </footer>
-    <!-- EXIT POPUP START - FOOTER BAHER TAK -->
-    <div id="exitPopup" style="display:none;">
-      <div class="popup-box">
-        <button onclick="closePopup()" class="popup-close">×</button>
-        <h3>Wait! 👋</h3>
-        <p>Want a Free Website Demo for Your Business?</p>
-        <p class="offer">Website in 7 Days + 1 Year Free Support + Starting at ₹9,999</p>
-        <button class="popup-btn" onclick="closePopup()">Yes, I Want a Demo →</button>
-        <a href="https://wa.me/917796340778?text=Hi,%20mala%20Free%20Website%20Demo%20pahije" target="_blank" class="whatsapp-btn">Ho, Demo Pahije →</a>
-      </div>
-    </div>
 <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 <div class="social-float"><a href="https://wa.me/917796340778?text=Hi%20CGI%20Tech%20Solutions%2C%20I%20saw%20your%20website.%20I%20want%20a%20website%20for%20my%20business." target="_blank" class="whatsapp-float" onclick="gtag('event', 'whatsapp_click', {'method': 'Floating WhatsApp'});">
         <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
@@ -1749,7 +1946,7 @@ footer .footer-social a{width:42px!important;height:42px!important;border-radius
  <script>
 // Page purna load zalyavar events add kar
 document.addEventListener('DOMContentLoaded', function() {
-  
+
   // 1. WhatsApp Button Click Track Karne
   document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -1801,6 +1998,48 @@ if(window.innerWidth < 768){
 }
 </script>
 <!-- STICKY CTA BAR END -->
+        <!-- EXIT POPUP START -->
+<div id="exitPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10000;align-items:center;justify-content:center;">
+  <div style="background:#1a0b3d;border:2px solid #ffc107;border-radius:16px;padding:30px;max-width:400px;margin:20px;text-align:center;position:relative;">
+    <button onclick="closePopup()" style="position:absolute;top:10px;right:15px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;">×</button>
+    <h3>Wait! 👋</h3>
+    <p>Want a Free Website Demo for Your Business?</p>
+    <p class="offer">Website in 7 Days + 1 Year Free Support + Starting at ₹9,999</p>
+    <button class="popup-btn">Yes, I Want a Demo →</button>
+    <a href="https://wa.me/917796340778?text=Hi,%20mala%20Free%20Website%20Demo%20pahije" target="_blank" style="display:inline-block;background:#25D366;color:#fff;padding:15px 30px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;">Ho, Demo Pahije →</a>
+  </div>
+</div>
+
+<script>
+// POPUP FAST TRIGGER - 3 SEC NANTR + 30% SCROLL
+let popupShown = false;
+
+// 1. 3 Second nantar popup
+setTimeout(function() {
+    if (!popupShown) {
+        document.getElementById('exitPopup').style.display = 'flex';
+        popupShown = true;
+    }
+}, 3000); // 3000 = 3 second
+
+// 2. 30% Scroll kelyavar popup
+window.addEventListener('scroll', function() {
+    if (popupShown) return;
+
+    let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+    if (scrollPercent > 30) {
+        document.getElementById('exitPopup').style.display = 'flex';
+        popupShown = true;
+    }
+});
+
+function closePopup(){
+    document.getElementById('exitPopup').style.display = 'none';
+}
+</script>
+<!-- EXIT POPUP END -->
+        <!-- STICKY CTA BAR -->
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -1857,40 +2096,5 @@ if(statsSection) {
     offset: 100
   });
 </script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-    "color": { "value": "#C084FC" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.5, "random": true },
-    "size": { "value": 3, "random": true },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#C084FC",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 2,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out"
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": { "enable": true, "mode": "grab" },
-      "onclick": { "enable": true, "mode": "push" }
-    }
-  }
-});
-</script>
 </body>
 </html>
-
