@@ -205,50 +205,107 @@ h1 {
 }
 </style>
 <style>
-/* ===== NUCLEAR RESET - SAGLA GRADIENT/YELLOW KILL ===== */
-body *::before, 
-body *::after {
-    background: none !important;
-    background-image: none !important;
-}
-
-/* PURN WEBSITE LA EKCH COLOR FORCE KAR */
-html, body, #__next, #root, main, #app {
+/* ===== 1. BODY LA EKCH COLOR FORCE KAR ===== */
+html, body, main, #__next, #root {
     background: #0a0a1a !important;
     background-color: #0a0a1a !important;
     background-image: none !important;
 }
 
-/* TECH STACK SECTION CHYA SAGLYA PARENTS LA TRANSPARENT KAR */
-body div,
-body section,
-body main,
-body article {
+/* ===== 2. YELLOW/ORANGE LA KILL KAR - BOOTSTRAP OVERRIDE ===== */
+.bg-warning,
+.bg-orange,
+.bg-yellow,
+.bg-primary,
+.bg-info,
+.bg-light,
+.bg-gradient,
+[class*="bg-"],
+[class*="orange"],
+[class*="yellow"],
+[style*="background: orange"],
+[style*="background-color: orange"],
+[style*="background: yellow"],
+[style*="background-color: rgb(255"] {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
 }
 
-/* FAKT HYA 2 LA COLOR RAHU DE */
-html, body, #particles-js {
-    background: #0a0a1a !important;
-}
-
-/* TECH STACK SECTION SPECIFIC */
+/* ===== 3. TECH STACK SECTION LA TRANSPARENT KAR ===== */
 .tech-stack-section {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
+    padding: 100px 20px !important;
     position: relative !important;
     z-index: 10 !important;
-    padding: 100px 20px !important;
 }
 
-/* JAR INLINE STYLE ASEL TAR - HE MAHATVACHA */
-[style*="background"] {
-    background: transparent !important;
+/* ===== 4. PSEUDO-ELEMENT CHA YELLOW PAN BAND KAR ===== */
+.tech-stack-section::before,
+.tech-stack-section::after,
+.container::before,
+.container::after,
+body *::before,
+body *::after {
+    background: none !important;
     background-color: transparent !important;
     background-image: none !important;
+}
+
+/* ===== 5. TEXT + LOGO STYLE ===== */
+.tech-stack-content {
+    text-align: center !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+.tech-stack-content .tag {
+    display: inline-block !important;
+    background: rgba(255, 105, 180, 0.15) !important;
+    color: #FF69B4 !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+}
+
+.tech-stack-content h1 {
+    color: #FFFFFF !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+}
+
+.tech-stack-content p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 18px !important;
+    margin-bottom: 60px !important;
+}
+
+.software-logos {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 50px 30px !important;
+}
+
+.logo-item img {
+    width: 50px !important;
+    height: 50px !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+}
+
+.logo-item p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .software-logos { grid-template-columns: repeat(3, 1fr) !important; }
 }
 </style>
 </head>
