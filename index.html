@@ -204,6 +204,87 @@ h1 {
     color: #2D1B69 !important;
 }
 </style>
+    <style>
+/* ===== 1. YELLOW/ORANGE LA COMPLETE KILL ===== */
+.tech-stack-section,
+section.tech-stack-section,
+.container .tech-stack-section,
+body section.tech-stack-section {
+    background: #0F1123 !important;
+    background-color: #0F1123 !important;
+    background-image: none !important;
+}
+
+/* Bootstrap cha bg-warning pan band */
+.bg-warning, .bg-orange, .bg-yellow {
+    background: #0F1123 !important;
+    background-color: #0F1123 !important;
+}
+
+/* ===== 2. SECTION STYLING ===== */
+.tech-stack-section {
+    padding: 100px 20px !important;
+    position: relative !important;
+}
+
+.tech-stack-content {
+    text-align: center !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+.tech-stack-content .tag {
+    display: inline-block !important;
+    background: rgba(255, 105, 180, 0.15) !important;
+    color: #FF69B4 !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+}
+
+.tech-stack-content h1 {
+    color: #FFFFFF !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+}
+
+.tech-stack-content p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 18px !important;
+    margin-bottom: 60px !important;
+}
+
+/* ===== 3. LOGO GRID - PHOTO SARKHA ===== */
+.software-logos {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 50px 30px !important;
+}
+
+.logo-item img {
+    width: 50px !important;
+    height: 50px !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+}
+
+.logo-item p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .software-logos { grid-template-columns: repeat(3, 1fr) !important; }
+    .tech-stack-content h1 { font-size: 32px !important; }
+}
+</style>
 </head>
 <body>
     <!-- Top Marquee Start -->
