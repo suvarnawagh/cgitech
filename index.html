@@ -158,8 +158,32 @@ body {
     100% { background-position: 0% 50%; }
 }
     </style>
+    <style>
+/* Golden Particles Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #0a0a1a;
+}
+
+/* Content var yenyasathi */
+header, .hero, section, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tuzha hero cha background transparent kar */
+.hero {
+    background: transparent !important;
+}
+</style>
 </head>
 <body>
+<div id="particles-js"></div>
 <!-- Top Marquee Start -->
 <div class="top-bar">
    <div class="marquee-wrapper">
@@ -1851,6 +1875,57 @@ if(statsSection) {
     once: true,
     offset: 100
   });
+</script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+// Golden Wavy Particles
+particlesJS('particles-js', {
+  "particles": {
+    "number": { "value": 120, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": ["#FFD700", "#FFC107", "#FFB300"] }, // 3 golden shades
+    "shape": { "type": "circle" },
+    "opacity": { 
+      "value": 0.7, 
+      "random": true, 
+      "anim": { "enable": true, "speed": 1, "opacity_min": 0.2, "sync": false } 
+    },
+    "size": { 
+      "value": 4, 
+      "random": true, 
+      "anim": { "enable": true, "speed": 3, "size_min": 0.5, "sync": false } 
+    },
+    "line_linked": { 
+      "enable": true, 
+      "distance": 150, 
+      "color": "#FFD700", 
+      "opacity": 0.4, 
+      "width": 1 
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.8,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 } // Wavy movement
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "repulse" }, // Mouse nela ki door honar
+      "onclick": { "enable": true, "mode": "push" }, // Click kela ki navin particles
+      "resize": true
+    },
+    "modes": {
+      "repulse": { "distance": 100, "duration": 0.4 },
+      "push": { "particles_nb": 3 }
+    }
+  },
+  "retina_detect": true
+});
 </script>
 </body>
 </html>
