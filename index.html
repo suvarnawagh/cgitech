@@ -962,7 +962,7 @@ function filterPortfolio(category) {
     appId: "1:758103773446:web:d849df6d6df883a6908e87"
   };
 
-  // Firebase Initialize कर
+ // Firebase Initialize कर
   firebase.initializeApp(firebaseConfig);
   const database = firebase.database();
   const reviewsRef = database.ref('reviews');
@@ -970,34 +970,53 @@ function filterPortfolio(category) {
   // फॉर्म सबमिट झाल्यावर डेटा सेव्ह कर
   document.getElementById('reviewForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const name = document.getElementById('reviewerName').value;
+    const name = document.getElementById('reviewerName').value.trim();
     const rating = document.getElementById('reviewerRating').value;
-    const text = document.getElementById('reviewerText').value;
+    const text = document.getElementById('reviewerText').value.trim();
+
+    // Validation: Name and text empty nasel tarach save kar
+    if (!name || !text) {
+      alert('Please fill name and review text');
+      return;
+    }
 
     reviewsRef.push({
       name: name,
-      rating: rating,
+      rating: Number(rating), // Number madhe convert kar
       text: text,
       date: new Date().toLocaleDateString('en-IN')
+    }).then(() => {
+      alert('Thanks! Your review is now live.');
+      this.reset();
+    }).catch((error) => {
+      alert('Error: ' + error.message);
     });
-
-    alert('Thanks! Your review is now live.');
-    this.reset();
   });
 
   // डेटाबेसमध्ये नवीन रिव्ह्यू आला की तो लगेच साईटवर दाखव
   reviewsRef.on('child_added', function(data) {
     const review = data.val();
+    
+    // FIX 1: Jar data nasel tar return kar
+    if (!review) return;
+    
+    // FIX 2: Safe values de, undefined asel tar default
+    const name = review.name || 'Anonymous';
+    const rating = Number(review.rating) || 5;
+    const text = review.text || '';
+    const date = review.date || new Date().toLocaleDateString('en-IN');
+    const firstLetter = name.charAt(0).toUpperCase(); // Aata safe aahe
+    
     const reviewCard = `
-      <div class="testimonial-card active">
+      <div class="testimonial-card" data-aos="fade-up">
         <div class="quote-icon">“</div>
-        <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
-        <p class="review-text">${review.text}</p>
+        <div class="stars">${'★'.repeat(rating)}${'☆'.repeat(5-rating)}</div>
+        <p class="review-text">${text}</p>
         <div class="client-info">
-          <div class="client-avatar">${review.name.charAt(0)}</div>
+          <div class="client-avatar">${firstLetter}</div>
           <div>
-            <h4>${review.name.toUpperCase()}</h4>
-            <p>${review.date}</p>
+            <h4>${name.toUpperCase()}</h4>
+            <p>${date}</p>
           </div>
         </div>
       </div>
