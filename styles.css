@@ -1,3 +1,44 @@
+/* ===== STATS SECTION GAP FIX ===== */
+.stats {
+    margin-top: 80px !important;
+    padding-top: 50px !important;
+    border-top: 1px solid #334155 !important;
+}
+
+.stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 40px !important;
+    text-align: center !important;
+}
+
+.stat-item h3 {
+    font-size: 48px !important;
+    color: #FFC107 !important;
+    margin-bottom: 10px !important;
+    font-weight: 700 !important;
+}
+
+.stat-item p {
+    color: #cbd5e1 !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+}
+
+/* Mobile sathi */
+@media (max-width: 768px) {
+    .stats {
+        margin-top: 50px !important;
+        padding-top: 30px !important;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+    .stat-item h3 {
+        font-size: 36px !important;
+    }
+}
 .about-grid {
     display: grid !important;
     grid-template-columns: 45% 55% !important;
