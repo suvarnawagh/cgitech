@@ -117,7 +117,7 @@
 }
 /* ===== CERTIFICATIONS - DARK BLUE + PROPER GRID ===== */
 .certifications {
-    padding: 80px 20px !important;
+     padding: 80px 20px !important;
     background: #1e1b4b !important;
     border-top: 1px solid #1e293b !important;
 }
@@ -146,10 +146,10 @@
 }
 
 .cert-card {
-    background: #1e293b !important;
+    background: #ffffff !important;
     padding: 25px !important;
     border-radius: 12px !important;
-    border: 2px solid #334155 !important;
+    border: 2px solid #FFC107 !important;
     width: 100% !important;
     max-width: 220px !important;
     height: 140px !important;
@@ -171,7 +171,7 @@
     width: auto !important;
     height: auto !important;
     object-fit: contain !important;
-    filter: brightness(0) invert(1) !important;
+    filter: none !important;
 }
 
 /* Tablet */
