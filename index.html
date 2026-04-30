@@ -565,174 +565,37 @@ header h1 {
   </div>
 </section>
 
-        <section class="about" id="about">
-            <div class="about-image">
-           <img src="team.jpg" alt="Our Team">
-            </div>
-            <div class="about-content">
-                <div class="section-badge">ABOUT US</div>
-                <h2>We Create Digital Excellence</h2>
-                <p>CGI Tech Solutions is a leading technology company in Pune dedicated to delivering innovative digital solutions. With years of experience and a passionate team, we transform ideas into reality.</p>
-                <p>Our mission is to empower businesses through technology, providing cutting-edge solutions that drive growth and success in the digital age.</p>
-                <ul class="about-points">
-                    <li>✓ Expert Team of Developers</li>
-                    <li>✓ 100+ Successful Projects</li>
-                    <li>✓ 24/7 Customer Support</li>
-                </ul>
-                <a href="#contact" class="btn-primary">Learn More</a>
-            </div>
-        </section>
-
-       <!-- PORTFOLIO SECTION START -->
-<section class="portfolio" id="portfolio">
-    <div class="section-badge">OUR WORK</div>
-    <h2>Featured Projects</h2>
-    <p class="section-subtitle">Take a look at some of our recent successful projects</p>
-    <!-- PORTFOLIO FILTER START -->
-<div style="text-align:center;margin-bottom:40px;">
-  <button class="filter-btn active" onclick="filterPortfolio('all')" style="background:#ffc107;color:#1a0b3d;border:none;padding:10px 20px;margin:5px;border-radius:25px;font-weight:600;cursor:pointer;">All</button>
-  <button class="filter-btn" onclick="filterPortfolio('ecommerce')" style="background:transparent;color:#ffc107;border:2px solid #ffc107;padding:10px 20px;margin:5px;border-radius:25px;font-weight:600;cursor:pointer;">E-Commerce</button>
-  <button class="filter-btn" onclick="filterPortfolio('web')" style="background:transparent;color:#ffc107;border:2px solid #ffc107;padding:10px 20px;margin:5px;border-radius:25px;font-weight:600;cursor:pointer;">Web Design</button>
-  <button class="filter-btn" onclick="filterPortfolio('app')" style="background:transparent;color:#ffc107;border:2px solid #ffc107;padding:10px 20px;margin:5px;border-radius:25px;font-weight:600;cursor:pointer;">Mobile App</button>
-</div>
-
-<script>
-function filterPortfolio(category) {
-  let cards = document.querySelectorAll('.portfolio-card');
-  cards.forEach(card => {
-    let tag = card.querySelector('.portfolio-tag').innerText.toLowerCase();
-    if (category === 'all' || tag.includes(category)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.style.background = 'transparent';
-    btn.style.color = '#ffc107';
-  });
-  event.target.style.background = '#ffc107';
-  event.target.style.color = '#1a0b3d';
-}
-</script>
-<!-- PORTFOLIO FILTER END -->
-    <div class="portfolio-grid-pro">
-        <!-- Project 1 -->
-        <div class="portfolio-card">
-            <div class="portfolio-image">
-                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&auto=format&fit=crop" alt="E-commerce Website">
-                <span class="portfolio-tag">E-COMMERCE</span>
-                <div class="portfolio-overlay">
-                    <a href="#" class="btn-view-project">View Project →</a>
-                </div>
-            </div>
-            <div class="portfolio-content">
-                <h3>Fashion Store Website</h3>
-                <p>Shopify + Custom Theme | 2X Sales in 3 Months</p>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="portfolio-card">
-            <div class="portfolio-image">
-                <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=600&auto=format&fit=crop" alt="Restaurant App">
-                <span class="portfolio-tag">MOBILE APP</span>
-                <div class="portfolio-overlay">
-                    <a href="#" class="btn-view-project">View Project →</a>
-                </div>
-            </div>
-            <div class="portfolio-content">
-                <h3>Food Delivery App</h3>
-                <p>React Native | 10,000+ Downloads</p>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="portfolio-card">
-            <div class="portfolio-image">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop" alt="Corporate Website">
-                <span class="portfolio-tag">WEB DESIGN</span>
-                <div class="portfolio-overlay">
-                    <a href="#" class="btn-view-project">View Project →</a>
-                </div>
-            </div>
-            <div class="portfolio-content">
-                <h3>Corporate Website</h3>
-                <p>WordPress + SEO | #1 Rank on Google</p>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="portfolio-card">
-            <div class="portfolio-image">
-                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&auto=format&fit=crop" alt="Social Media Campaign">
-                <span class="portfolio-tag">MARKETING</span>
-                <div class="portfolio-overlay">
-                    <a href="#" class="btn-view-project">View Project →</a>
-                </div>
-            </div>
-            <div class="portfolio-content">
-                <h3>Instagram Campaign</h3>
-                <p>5M+ Reach |300% Engagement Growth</p>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="portfolio-card">
-            <div class="portfolio-image">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&auto=format&fit=crop" alt="ERP System">
-                <span class="portfolio-tag">ERP SYSTEM</span>
-                <div class="portfolio-overlay">
-                    <a href="#" class="btn-view-project">View Project →</a>
-                </div>
-            </div>
-            <div class="portfolio-content">
-                <h3>Manufacturing ERP</h3>
-                <p>Custom Laravel | 40% Cost Saving</p>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="portfolio-card">
-            <div class="portfolio-image">
-                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&auto=format&fit=crop" alt="Video Production">
-                <span class="portfolio-tag">VIDEO ADS</span>
-                <div class="portfolio-overlay">
-                    <a href="#" class="btn-view-project">View Project →</a>
-                </div>
-            </div>
-            <div class="portfolio-content">
-                <h3>Product Ad Film</h3>
-                <p>2M+ Views | 5X ROI on Ad Spend</p>
-            </div>
-        </div>
-    </div>
+       <!-- ABOUT CTA - Delete kelya nanatar ithe add kar -->
+<section style="background:#1a0b3d;padding:80px 5%;text-align:center;">
+    <div class="section-badge" style="background:rgba(255,193,7,0.1);color:#ffc107;border:1px solid #ffc107;display:table;margin:0 auto 15px;padding:6px 16px;border-radius:20px;">ABOUT US</div>
+    <h2 style="color:#fff;font-size:36px;margin-bottom:10px;font-family:'Playfair Display',serif;">We Create Digital Excellence</h2>
+    <p style="color:#d1c5e8;margin-bottom:30px;">6+ Years Experience. 100+ Projects Delivered. 24/7 Support.</p>
+    <a href="aboutus/" style="background:#ffc107;color:#1a0b3d;padding:15px 40px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;">
+        Know More About Us →
+    </a>
 </section>
-<!-- PORTFOLIO SECTION END -->
-<!-- CLIENTS SECTION START -->
-<section class="clients" id="clients">
-    <div class="section-badge">TRUSTED BY</div>
-    <h2>Our Happy Clients</h2>
-    <p class="section-subtitle">Brands that trust us with their digital growth</p>
-  <div class="client-logos-pro">
-    <div class="client-logo-card"><img src="shriganesh.png" alt="Shree Ganesh Agro Services" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="trishaagro.jpeg" alt="Trisha Agro" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="kanhaiya.png" alt="Kanhaiya Agro Service" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="preet.png" alt="PREET" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="om.jpeg" alt="OM Born to Runs" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="shriom.jpeg" alt="Shri OM" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="tatamotors.png" alt="TATA MOTORS" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="tvs.png" alt="TVS Shelar Automotive" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="mahindra.png" alt="Mahindra" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="suzuki.png" alt="SUZUKI" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="vishal.png" alt="NP Vishal Combines" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="nursing.png" alt="Sai Nursing Institute" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="saicollege.png" alt="Sai Paramedical College" loading="lazy" width="120" height="60"></div>
-    <div class="client-logo-card"><img src="ajna.png" alt="AjnaLens" loading="lazy" width="120" height="60"></div>
-</div>
-</section>
-<!-- CLIENTS SECTION END -->
 
+    
+<!-- PORTFOLIO CTA - Portfolio delete kelya nanatar ithe add kar -->
+<section style="background:#0d021f;padding:80px 5%;text-align:center;">
+    <div class="section-badge" style="background:rgba(255,193,7,0.1);color:#ffc107;border:1px solid #ffc107;display:table;margin:0 auto 15px;padding:6px 16px;border-radius:20px;">OUR WORK</div>
+    <h2 style="color:#fff;font-size:36px;margin-bottom:10px;font-family:'Playfair Display',serif;">100+ Websites Delivered</h2>
+    <p style="color:#d1c5e8;margin-bottom:30px;">E-commerce, Corporate, Restaurant - sagle projects bagha</p>
+    <a href="portfolio/" style="background:#ffc107;color:#1a0b3d;padding:15px 40px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;">
+        View Full Portfolio →
+    </a>
+</section>
+
+<!-- CLIENTS CTA - Clients delete kelya nanatar ithe add kar -->
+<section style="background:#1a0b3d;padding:80px 5%;text-align:center;">
+    <div class="section-badge" style="background:rgba(255,193,7,0.1);color:#ffc107;border:1px solid #ffc107;display:table;margin:0 auto 15px;padding:6px 16px;border-radius:20px;">TRUSTED BY</div>
+    <h2 style="color:#fff;font-size:36px;margin-bottom:10px;font-family:'Playfair Display',serif;">200+ Happy Clients</h2>
+    <p style="color:#d1c5e8;margin-bottom:30px;">TATA, Mahindra, Suzuki sarkhya brands ni trust kela</p>
+    <a href="clients/" style="background:transparent;color:#ffc107;border:2px solid #ffc107;padding:15px 40px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;">
+        See All Clients →
+    </a>
+</section>
+        
         <!-- VIDEO TESTIMONIALS START -->
 <section style="background:#0d021f;padding:80px 5%;">
   <div style="max-width:1200px;margin:0 auto;">
